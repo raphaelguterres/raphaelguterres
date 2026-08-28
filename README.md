@@ -2,7 +2,7 @@
 
 # Raphael Guterres
 
-#### 🛡️ Cybersecurity & Full-Stack Dev
+#### 🛡️ Cybersecurity & AppSec
 
 Construindo produtos que saem do rascunho e vão pro ar.
 
