@@ -20,10 +20,10 @@ Construindo produtos que saem do rascunho e vão pro ar.
 
 **Segurança**
 - **SAFE** — plataforma SOC/SIEM em tempo real · correlation engine, risk scoring, 103 testes &nbsp;·&nbsp; [código](https://github.com/raphaelguterres/SAFE)
-- **Safe Supply** — Cyber Score, LGPD e superfície de ataque para PMEs
+
 
 **Eventos · lista + ingresso**
-- **Festa do Chefe** — lista + venda de ingressos (Pix/cartão), QR por e-mail e portaria &nbsp;·&nbsp; [ao vivo](https://authentic-festadochefe.vercel.app)
+
 - **NIGHT'S LISTA** — lista digital para casas noturnas, ingresso com QR &nbsp;·&nbsp; [ao vivo](https://nights-lista.vercel.app)
 - **ATO LISTAS** — listas para festas, link compartilhável e portaria ao vivo &nbsp;·&nbsp; [demo](https://ato-listas.vercel.app)
 - **DECK 22** — lista de convidados para a casa, painel e lista ao vivo &nbsp;·&nbsp; [ao vivo](https://apresentacaodeck22.vercel.app)
