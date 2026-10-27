@@ -22,7 +22,7 @@ Projetos de segurança e produtos digitais construídos com foco em operação, 
 | Projeto | Escopo | Stack / evidências |
 | --- | --- | --- |
 | **[Threat Hunting & Detection Lab](https://github.com/raphaelguterres/threat-hunting-detection-lab)**<br/>_Projeto principal de Segurança Defensiva_ | Laboratório operacional de threat hunting e engenharia de detecção com telemetria real de endpoints Windows e Linux. Fluxos documentados de coleta, triagem, MITRE ATT&CK, investigação e resposta. | Wazuh · Sysmon · MITRE ATT&CK · FIM · Windows Server · Kali Linux |
-| **[SAFE](https://github.com/raphaelguterres/SAFE)** | Plataforma SOC/SIEM em tempo real com correlation engine, risk scoring e suíte de 103 testes. | Python · TypeScript · Observabilidade · Detecção |
+
 
 ## Produtos digitais
 
