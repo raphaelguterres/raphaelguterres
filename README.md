@@ -2,39 +2,44 @@
 
 # Raphael Guterres
 
-#### 🛡️ Cybersecurity & AppSec
+**Security Engineering · AppSec · Product Development**
 
-Construindo produtos que saem do rascunho e vão pro ar.
+Projetos de segurança e produtos digitais construídos com foco em operação, qualidade e evidências.
 
-[![portfólio](https://img.shields.io/badge/portfólio-guterres.vercel.app-111111?style=flat-square&logo=vercel&logoColor=white)](https://guterres.vercel.app)
+[![Portfólio](https://img.shields.io/badge/Portfólio-guterres.vercel.app-111111?style=flat-square&logo=vercel&logoColor=white)](https://guterres.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-raphaelguterres-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/raphaelguterres)
 
 <br/>
 
-![skills](https://skillicons.dev/icons?i=python,ts,react,nodejs,supabase,postgres,vercel,git&theme=dark)
+![Skills](https://skillicons.dev/icons?i=python,ts,react,nodejs,supabase,postgres,vercel,git&theme=dark)
 
 </div>
 
-<br/>
+## Security Engineering
 
-### Projetos
+> Projetos orientados a detecção, investigação e desenvolvimento seguro.
 
-**Segurança**
-- **SAFE** — plataforma SOC/SIEM em tempo real · correlation engine, risk scoring, 103 testes &nbsp;·&nbsp; [código](https://github.com/raphaelguterres/SAFE)
+| Projeto | Escopo | Stack / evidências |
+| --- | --- | --- |
+| **[Threat Hunting & Detection Lab](https://github.com/raphaelguterres/threat-hunting-detection-lab)**<br/>_Projeto principal de Segurança Defensiva_ | Laboratório operacional de threat hunting e engenharia de detecção com telemetria real de endpoints Windows e Linux. Fluxos documentados de coleta, triagem, MITRE ATT&CK, investigação e resposta. | Wazuh · Sysmon · MITRE ATT&CK · FIM · Windows Server · Kali Linux |
+| **[SAFE](https://github.com/raphaelguterres/SAFE)** | Plataforma SOC/SIEM em tempo real com correlation engine, risk scoring e suíte de 103 testes. | Python · TypeScript · Observabilidade · Detecção |
 
+## Produtos digitais
 
-**Eventos · lista + ingresso**
+### Eventos · lista e ingresso
 
-- **NIGHT'S LISTA** — lista digital para casas noturnas, ingresso com QR &nbsp;·&nbsp; [ao vivo](https://nights-lista.vercel.app)
-- **ATO LISTAS** — listas para festas, link compartilhável e portaria ao vivo &nbsp;·&nbsp; [demo](https://ato-listas.vercel.app)
-- **DECK 22** — lista de convidados para a casa, painel e lista ao vivo &nbsp;·&nbsp; [ao vivo](https://apresentacaodeck22.vercel.app)
+- **[NIGHT'S LISTA](https://nights-lista.vercel.app)** — lista digital para casas noturnas e ingresso com QR.
+- **[ATO LISTAS](https://ato-listas.vercel.app)** — listas para festas, link compartilhável e portaria ao vivo.
+- **[DECK 22](https://apresentacaodeck22.vercel.app)** — gestão de convidados, painel e lista ao vivo.
 
-**Web & landing**
-- **Survey** — landing de topografia, georreferenciamento e hidrologia · Three.js + GSAP &nbsp;·&nbsp; [ao vivo](https://survey-landing-ashy.vercel.app)
+### Web & landing
+
+- **[Survey](https://survey-landing-ashy.vercel.app)** — landing para topografia, georreferenciamento e hidrologia com Three.js e GSAP.
 
 <br/>
 
 <div align="center">
 
-![top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=raphaelguterres&layout=compact&langs_count=6&hide_border=true&title_color=E8C97A&text_color=8b949e&bg_color=0D1117)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=raphaelguterres&layout=compact&langs_count=6&hide_border=true&title_color=E8C97A&text_color=8B949E&bg_color=0D1117)
 
 </div>
