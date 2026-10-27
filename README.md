@@ -2,29 +2,48 @@
 
 # Raphael Guterres
 
-**Security Engineering · AppSec · Product Development**
+### Security Engineering · AppSec · Product Development
 
-Projetos de segurança e produtos digitais construídos com foco em operação, qualidade e evidências.
+Transformo telemetria em detecções investigáveis e produtos em sistemas mais seguros.
 
 [![Portfólio](https://img.shields.io/badge/Portfólio-guterres.vercel.app-111111?style=flat-square&logo=vercel&logoColor=white)](https://guterres.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-raphaelguterres-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/raphaelguterres)
-
-<br/>
-
-![Threat Hunting stack](https://skillicons.dev/icons?i=linux,docker,bash,powershell,githubactions,git&theme=dark)
-
-**Wazuh · Sysmon · MITRE ATT&CK · Docker · Kali Linux · Windows Server**
 
 </div>
 
 ## Security Engineering
 
-> Projetos orientados a detecção, investigação e desenvolvimento seguro.
+### Threat Hunting & Detection Lab
+> Projeto principal de Segurança Defensiva.
 
-| Projeto | Escopo | Stack / evidências |
-| --- | --- | --- |
-| **[Threat Hunting & Detection Lab](https://github.com/raphaelguterres/threat-hunting-detection-lab)**<br/>_Projeto principal de Segurança Defensiva_ | Laboratório operacional de threat hunting e engenharia de detecção com telemetria real de endpoints Windows e Linux. Fluxos documentados de coleta, triagem, MITRE ATT&CK, investigação e resposta. | Wazuh · Sysmon · MITRE ATT&CK · FIM · Windows Server · Kali Linux |
+[![Validação do laboratório](https://github.com/raphaelguterres/threat-hunting-detection-lab/actions/workflows/validate-lab.yml/badge.svg)](https://github.com/raphaelguterres/threat-hunting-detection-lab/actions/workflows/validate-lab.yml)
 
+Laboratório operacional de threat hunting e engenharia de detecção com **Wazuh**, telemetria de endpoints Windows e Linux, investigação documentada e mapeamento para **MITRE ATT&CK**.
+
+[Ver repositório](https://github.com/raphaelguterres/threat-hunting-detection-lab) · [Arquitetura](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/main/docs/architecture.md) · [Casos de investigação](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/main/docs/case-study-timelines.md) · [Triagem MITRE](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/main/docs/mitre-triage-t1078-t1021.md)
+
+| Capacidade | Evidência no projeto |
+| --- | --- |
+| **Detection engineering** | Regras Wazuh versionadas, Sysmon IDs 1/3/11 e validação por CI. |
+| **Threat hunting** | Eventos correlacionados por ativo, usuário, origem, horário e sequência. |
+| **Investigation & triage** | Cinco estudos de caso, playbooks com aprovação humana e registro de decisões. |
+| **ATT&CK-driven defense** | Técnicas MITRE usadas como contexto analítico — não como veredito automático. |
+
+### Stack de segurança
+
+<div align="center">
+
+![Threat Hunting stack](https://skillicons.dev/icons?i=linux,docker,bash,powershell,githubactions,git&theme=dark)
+
+**Wazuh · Sysmon · MITRE ATT&CK · Docker · Kali Linux · Windows Server · GitHub Actions**
+
+</div>
+
+## Como eu trabalho
+
+- **Evidência antes de severidade:** um alerta só vira decisão depois de correlacionar telemetria e contexto operacional.
+- **Automação revisável:** regras, validações e documentação vivem no repositório e passam por controle de versão.
+- **Resposta responsável:** contenções exigem contexto, aprovação humana, critério de sucesso e rollback.
 
 ## Produtos digitais
 
