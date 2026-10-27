@@ -11,7 +11,9 @@ Projetos de segurança e produtos digitais construídos com foco em operação, 
 
 <br/>
 
-![Skills](https://skillicons.dev/icons?i=python,ts,react,nodejs,supabase,postgres,vercel,git&theme=dark)
+![Threat Hunting stack](https://skillicons.dev/icons?i=linux,docker,bash,powershell,githubactions,git&theme=dark)
+
+**Wazuh · Sysmon · MITRE ATT&CK · Docker · Kali Linux · Windows Server**
 
 </div>
 
