@@ -46,6 +46,8 @@
 
 **Auditoria nativa de 02/11 — Windows Remote:** [PR #13](https://github.com/raphaelguterres/threat-hunting-detection-lab/pull/13) documenta consulta somente leitura de Windows Security/Sysmon e Wazuh FIM. Verificou **4698=0** com subcategoria de auditoria desabilitada; **1 criação de conta (4720)** sem logon 4624/4672 do mesmo SID nos 30 minutos seguintes; Sysmon ID 1 **≥2.000** (limite da consulta); **102 FIM históricos** do agente 004 e **nenhum** na janela recente, confirmada por consulta de controle. Isso identifica **lacunas e limites da amostra**, não confirma nem descarta incidentes. [Relatório técnico](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/main/docs/m1-native-windows-wazuh-visibility-review-20261102.md).
 
+**Change control preparado (02/11):** a [Issue #15](https://github.com/raphaelguterres/threat-hunting-detection-lab/issues/15) e o [runbook técnico](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/main/docs/m1-change-control-4698-fim-agent004.md) registram auditoria 4698 **desativada**, Security de **20 MB**, WazuhSvc ativo e FIM 004 com **5 diretórios programados, 1 realtime e 23 entradas de registro**. Scripts privados de aprovação/rollback preparados, sem execução da alteração. A aprovação e a inspeção de precedência centralizada FIM continuam pendentes.
+
 **M1 permanece em andamento:** [Issue #9](https://github.com/raphaelguterres/threat-hunting-detection-lab/issues/9). As 35–60 horas são previsão para o restante dessa etapa, não horas já registradas.
 
 ### M2 — AppSec e DevSecOps · 65–110 h estimadas
