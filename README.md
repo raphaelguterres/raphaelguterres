@@ -9,6 +9,7 @@ Transformo telemetria em detecções investigáveis e produtos em sistemas mais 
 [![Portfólio](https://img.shields.io/badge/Portfólio-guterres.vercel.app-111111?style=flat-square&logo=vercel&logoColor=white)](https://guterres.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-raphaelguterres-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/raphaelguterres)
 [![Cybersecurity Roadmap BR](https://img.shields.io/badge/Open_Source-Cybersecurity_Roadmap_BR-111111?style=flat-square&logo=github&logoColor=white)](https://github.com/raphaelguterres/cybersecurity-roadmap-br)
+[![Study OS Dashboard](https://img.shields.io/badge/Study_OS-Dashboard-BAF568?style=flat-square&logo=github&logoColor=111111)](https://raphaelguterres.github.io/cybersecurity-roadmap-br/)
 
 </div>
 
@@ -62,7 +63,7 @@ Criei e mantenho o **[Cybersecurity Roadmap BR](https://github.com/raphaelguterr
 
 A comunidade pode contribuir com **Issues, Pull Requests e Discussions** para revisar o material, compartilhar experiências e criar novos exercícios com escopo autorizado.
 
-**[📍 Começar o roadmap](https://github.com/raphaelguterres/cybersecurity-roadmap-br/blob/main/ROADMAP.md)** · **[🧪 Laboratórios](https://github.com/raphaelguterres/cybersecurity-roadmap-br/tree/main/labs)** · **[🤝 Participar da comunidade](https://github.com/raphaelguterres/cybersecurity-roadmap-br/discussions)**
+**[🖥️ Dashboard interativo](https://raphaelguterres.github.io/cybersecurity-roadmap-br/)** · **[📍 Começar o roadmap](https://github.com/raphaelguterres/cybersecurity-roadmap-br/blob/main/ROADMAP.md)** · **[🧪 Laboratórios](https://github.com/raphaelguterres/cybersecurity-roadmap-br/tree/main/labs)** · **[🤝 Participar da comunidade](https://github.com/raphaelguterres/cybersecurity-roadmap-br/discussions)**
 
 ## Produtos digitais
 
