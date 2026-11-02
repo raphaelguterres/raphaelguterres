@@ -8,6 +8,7 @@ Transformo telemetria em detecções investigáveis e produtos em sistemas mais 
 
 [![Portfólio](https://img.shields.io/badge/Portfólio-guterres.vercel.app-111111?style=flat-square&logo=vercel&logoColor=white)](https://guterres.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-raphaelguterres-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/raphaelguterres)
+[![Cybersecurity Roadmap BR](https://img.shields.io/badge/Open_Source-Cybersecurity_Roadmap_BR-111111?style=flat-square&logo=github&logoColor=white)](https://github.com/raphaelguterres/cybersecurity-roadmap-br)
 
 </div>
 
@@ -50,6 +51,18 @@ Laboratório operacional de threat hunting e engenharia de detecção com **Wazu
 Mantenho uma trilha pública de desenvolvimento em **SOC / Blue Team, Detection Engineering, Incident Response, AppSec e Cloud Security**, com projetos reais, horas **estimadas** e critérios de conclusão baseados em testes e evidências — sem confundir projetos com experiência profissional em produção.
 
 **[Ver roadmap de competências e projetos](roadmaps/ROADMAP_SOC_BLUE_TEAM_PLENO_SENIOR.md)** · **[Acompanhar progresso verificável](roadmaps/PROGRESSO.md)**
+
+## Open Source & Comunidade
+
+### 🛡️ Cybersecurity Roadmap BR
+
+Criei e mantenho o **[Cybersecurity Roadmap BR](https://github.com/raphaelguterres/cybersecurity-roadmap-br)**, uma iniciativa **open source e gratuita** para fortalecer a comunidade brasileira de cibersegurança, do primeiro contato com a área à especialização técnica.
+
+**O que você encontra:** 11 trilhas de estudo (Fundamentos, Redes, Programação, SOC/Blue Team, AppSec, Pentest Ético, Cloud/DevSecOps, DFIR, GRC/IAM, Threat Intelligence e Carreira), roadmap de **24 semanas**, laboratórios guiados, glossário e recursos de aprendizado.
+
+A comunidade pode contribuir com **Issues, Pull Requests e Discussions** para revisar o material, compartilhar experiências e criar novos exercícios com escopo autorizado.
+
+**[📍 Começar o roadmap](https://github.com/raphaelguterres/cybersecurity-roadmap-br/blob/main/ROADMAP.md)** · **[🧪 Laboratórios](https://github.com/raphaelguterres/cybersecurity-roadmap-br/tree/main/labs)** · **[🤝 Participar da comunidade](https://github.com/raphaelguterres/cybersecurity-roadmap-br/discussions)**
 
 ## Produtos digitais
 
