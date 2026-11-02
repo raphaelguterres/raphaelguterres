@@ -11,7 +11,7 @@
 | Laboratório Wazuh com agentes e detecções | **Validado** | [Detection Engineering Blue Team](https://github.com/raphaelguterres/detection-engineering-blue-team) |
 | Cinco regras customizadas e regressões versionadas | **Validado** | [README técnico](https://github.com/raphaelguterres/detection-engineering-blue-team#estado-da-fase-3) |
 | Manager → Indexer, mesma identidade original | **6/6 concluído** | [Relatório sanitizado](https://github.com/raphaelguterres/detection-engineering-blue-team/blob/main/docs/phase3-manager-indexer-exact-correlation-20261102.md) |
-| Indexer → interface Discover, mesmos seis documentos | **Pendente** | [Issue #4](https://github.com/raphaelguterres/detection-engineering-blue-team/issues/4) |
+| Manager → Indexer → Discover, mesma identidade original | **6/6 concluído — 5/5 regras** | [Aceite operacional](https://github.com/raphaelguterres/detection-engineering-blue-team/blob/main/docs/phase3-final-three-stage-six-event-acceptance-20261102.md) |
 | Threat Hunting Lab | **Projeto existente; aprofundamento planejado** | [Repositório](https://github.com/raphaelguterres/threat-hunting-detection-lab) |
 | Assessment AppSec | **Projeto existente; integração DevSecOps planejada** | [Repositório](https://github.com/raphaelguterres/appsec-automatizado) |
 | Incident Response & SOAR Lab | **Não iniciado** | Criar repositório próprio quando esta etapa começar |
@@ -19,17 +19,17 @@
 
 ## Checklist de milestones
 
-### M0 — Encerrar Fase 3 de Detection Engineering · 8–15 h estimadas
+### M0 — Fase 3 Detection Engineering concluída (02/11/2026) · 8–15 h originalmente estimadas
 
 - [x] Criar e testar cinco regras de detecção customizadas.
 - [x] Correlacionar seis eventos originais Manager → Indexer por ID, regra, agente e timestamp UTC.
 - [x] Preparar verificador offline e testes para três fontes independentes — [PR #28 aprovado](https://github.com/raphaelguterres/detection-engineering-blue-team/pull/28).
-- [ ] **Exportar CSV diretamente da interface Discover** (não Dev Tools), salvar em `.lab/phase3-discover.csv` e executar `scripts/phase3-verify-discover.bat` conforme [procedimento de aceite](https://github.com/raphaelguterres/detection-engineering-blue-team/blob/main/docs/phase3-discover-csv-acceptance.md).
-- [ ] Conferir os **mesmos seis eventos** em **Dashboard Discover**, independentemente do Console/Dev Tools, com `id`, `rule.id`, `agent.id` e timestamp UTC, e atestar a origem do CSV.
-- [ ] Documentar aceite por regra sem IDs brutos e registrar conclusão na Issue #4.
-- [ ] Revisar o estudo de caso e deixar explícitos escopo, resultado e limitações.
+- [x] **Inspecionar independentemente seis JSONs originais na aba Discover** e projetar apenas os campos de identidade para `.lab/phase3-discover.csv`; o CSV original do menu Reporting omitia timestamp e foi preservado **sem uso para o aceite**. [Metodologia](https://github.com/raphaelguterres/detection-engineering-blue-team/blob/main/docs/phase3-final-three-stage-six-event-acceptance-20261102.md).
+- [x] Conferir os **mesmos seis eventos** na interface **Dashboard Discover**, independentemente do Console/Dev Tools, com `id`, `rule.id`, `agent.id` e timestamp UTC: **6/6 correspondências exatas** (saída offline, código 0).
+- [x] Documentar aceite por regra sem IDs brutos e registrar conclusão na [Issue #4](https://github.com/raphaelguterres/detection-engineering-blue-team/issues/4).
+- [x] Revisar o [estudo de caso](https://github.com/raphaelguterres/detection-engineering-blue-team/blob/main/docs/case-study-wazuh-detection-engineering.md) e delimitar escopo, resultado e lacuna de indexação histórica 27–30/10.
 
-**Gate:** 6/6 no Discover com a mesma identidade. Até lá, Fase 3 **não** está formalmente concluída.
+**Gate M0:** **PASS 6/6** para os seis alertas de cinco regras na janela UTC de 01–02/11/2026, comprovados nas três fontes. A [Issue #4](https://github.com/raphaelguterres/detection-engineering-blue-team/issues/4) registra o encerramento da Fase 3. A lacuna de indexação de 27–30/10 permanece **investigação separada**.
 
 ### M1 — Threat Hunting e investigação · 35–60 h estimadas
 
@@ -76,7 +76,7 @@
 
 | Período | Prioridade | Evidência de saída |
 | --- | --- | --- |
-| Semanas 1–2 | M0: conferência Discover, aceite da Fase 3 | Issue #4 fechada **somente com evidência**; estudo de caso atualizado |
+| Semanas 1–2 | **M0 concluído:** conferência Discover, aceite da Fase 3 | Seis identidades verificadas nas três fontes, estudo de caso e Issue #4 atualizados |
 | Semanas 3–6 | M1: três investigações e tuning | Estudos de caso, testes e cobertura atualizada |
 | Semanas 7–11 | M2: AppSec/DevSecOps | Pipeline auditável, achados corrigidos, regressões reproduzíveis |
 | Semanas 12–13 | Consolidar, revisar, documentar e planejar M3 | README, decisões, portfólio e backlog de resposta a incidentes |
