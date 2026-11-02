@@ -23,7 +23,9 @@
 
 - [x] Criar e testar cinco regras de detecção customizadas.
 - [x] Correlacionar seis eventos originais Manager → Indexer por ID, regra, agente e timestamp UTC.
-- [ ] Conferir os **mesmos seis eventos** em **Dashboard Discover**, independentemente do Console/Dev Tools.
+- [x] Preparar verificador offline e testes para três fontes independentes — [PR #28 aprovado](https://github.com/raphaelguterres/detection-engineering-blue-team/pull/28).
+- [ ] **Exportar CSV diretamente da interface Discover** (não Dev Tools), salvar em `.lab/phase3-discover.csv` e executar `scripts/phase3-verify-discover.bat` conforme [procedimento de aceite](https://github.com/raphaelguterres/detection-engineering-blue-team/blob/main/docs/phase3-discover-csv-acceptance.md).
+- [ ] Conferir os **mesmos seis eventos** em **Dashboard Discover**, independentemente do Console/Dev Tools, com `id`, `rule.id`, `agent.id` e timestamp UTC, e atestar a origem do CSV.
 - [ ] Documentar aceite por regra sem IDs brutos e registrar conclusão na Issue #4.
 - [ ] Revisar o estudo de caso e deixar explícitos escopo, resultado e limitações.
 
