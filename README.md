@@ -45,6 +45,12 @@ Laboratório operacional de threat hunting e engenharia de detecção com **Wazu
 - **Automação revisável:** regras, validações e documentação vivem no repositório e passam por controle de versão.
 - **Resposta responsável:** contenções exigem contexto, aprovação humana, critério de sucesso e rollback.
 
+## Roadmap de evolução em segurança
+
+Mantenho uma trilha pública de desenvolvimento em **SOC / Blue Team, Detection Engineering, Incident Response, AppSec e Cloud Security**, com projetos reais, horas **estimadas** e critérios de conclusão baseados em testes e evidências — sem confundir projetos com experiência profissional em produção.
+
+**[Ver roadmap de competências e projetos](roadmaps/ROADMAP_SOC_BLUE_TEAM_PLENO_SENIOR.md)** · **[Acompanhar progresso verificável](roadmaps/PROGRESSO.md)**
+
 ## Produtos digitais
 
 ### Eventos · lista e ingresso
