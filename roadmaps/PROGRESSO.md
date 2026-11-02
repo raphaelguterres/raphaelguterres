@@ -52,6 +52,8 @@
 
 **Correção preventiva FIM preparada (02/11):** [PR #20](https://github.com/raphaelguterres/threat-hunting-detection-lab/pull/20) entregou [proposta de segregação por OS](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/main/docs/m1-fim-os-scoped-remediation-plan.md), validador offline e **15 testes novos em Windows/Linux**. O exemplo é sintético e não implantável. **Nenhum arquivo do Manager foi alterado**, e faltam inventário autorizado dos agentes do grupo `default`, aprovação, `verify-agent-conf` oficial e evidência operacional para concluir a [Issue #17](https://github.com/raphaelguterres/threat-hunting-detection-lab/issues/17).
 
+**Controle de mudança reforçado (02/11):** o [PR #21](https://github.com/raphaelguterres/threat-hunting-detection-lab/pull/21) acrescentou comparação offline de **original x proposta** do `agent.conf`, com **21 testes sintéticos aprovados no Windows e Linux**. A ferramenta permite somente o escopo Linux nos blocos elegíveis, rejeitando mudanças de caminhos, fontes, atributos e comentários. **Sem deployment**: ainda faltam inventário autorizado, aprovação, verificador oficial Wazuh e aceite FIM real.
+
 **M1 permanece em andamento:** [Issue #9](https://github.com/raphaelguterres/threat-hunting-detection-lab/issues/9). As 35–60 horas são previsão para o restante dessa etapa, não horas já registradas.
 
 ### M2 — AppSec e DevSecOps · 65–110 h estimadas
