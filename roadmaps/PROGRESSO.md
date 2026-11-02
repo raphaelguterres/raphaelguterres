@@ -48,6 +48,8 @@
 
 **Change control preparado (02/11):** a [Issue #15](https://github.com/raphaelguterres/threat-hunting-detection-lab/issues/15) e o [runbook técnico](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/main/docs/m1-change-control-4698-fim-agent004.md) registram auditoria 4698 **desativada**, Security de **20 MB**, WazuhSvc ativo e FIM 004 com **5 diretórios programados, 1 realtime e 23 entradas de registro**. Scripts privados de aprovação/rollback preparados, sem execução da alteração. A aprovação e a inspeção de precedência centralizada FIM continuam pendentes.
 
+**Pré-check adicional em 02/11:** [PR #18](https://github.com/raphaelguterres/threat-hunting-detection-lab/pull/18) confirma log Security **Circular / 20 MB**, com **2 coletores eventchannel Security** locais (um filtrado). Foi identificada uma [diretiva FIM realtime central com caminho de formato Linux inexistente no WindowsServer](https://github.com/raphaelguterres/threat-hunting-detection-lab/issues/17). A origem no grupo do Manager e o efeito efetivo ainda não foram validados porque o Dashboard exigiu nova autenticação; **nenhuma configuração foi alterada**. Habilitação 4698 segue aguardando aprovação na Issue #15.
+
 **M1 permanece em andamento:** [Issue #9](https://github.com/raphaelguterres/threat-hunting-detection-lab/issues/9). As 35–60 horas são previsão para o restante dessa etapa, não horas já registradas.
 
 ### M2 — AppSec e DevSecOps · 65–110 h estimadas
