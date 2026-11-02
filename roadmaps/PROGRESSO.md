@@ -33,11 +33,16 @@
 
 ### M1 — Threat Hunting e investigação · 35–60 h estimadas
 
-- [ ] Planejar três hipóteses novas e definir telemetria mínima.
-- [ ] Construir três timelines de casos controlados e registrar hipóteses alternativas.
-- [ ] Demonstrar revisão de falsos positivos ou controles negativos.
-- [ ] Atualizar cobertura MITRE ATT&CK com lacunas e limitações.
-- [ ] Publicar estudos de caso sanitizados e CI verde.
+**Incremento de preparação implementado em 02/11/2026:** [PR #10 incorporado](https://github.com/raphaelguterres/threat-hunting-detection-lab/pull/10), com [três hipóteses documentadas](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/main/docs/m1-three-hunting-hypotheses.md), correlacionador Python offline e **20/20 testes sintéticos aprovados em Linux e Windows**. Os resultados representam somente validação do software de análise, **não novas detecções ou incidentes reais**.
+
+- [x] Planejar três hipóteses novas e definir telemetria mínima, junções e limitações.
+- [x] Implementar correlacionador offline com controles negativos **sintéticos**; ainda não caracteriza revisão de falsos positivos em produção.
+- [ ] Construir três timelines de **novas investigações reais controladas** e registrar hipóteses alternativas.
+- [ ] Demonstrar tuning e revisão de falsos positivos com evidência operacional, não apenas fixtures.
+- [ ] Atualizar cobertura MITRE ATT&CK **a partir de evidências reais**, mantendo hipóteses como hipóteses até validação.
+- [ ] Publicar estudos de caso sanitizados de M1 e registrar aceite final da fase.
+
+**M1 permanece em andamento:** [Issue #9](https://github.com/raphaelguterres/threat-hunting-detection-lab/issues/9). As 35–60 horas são previsão para o restante dessa etapa, não horas já registradas.
 
 ### M2 — AppSec e DevSecOps · 65–110 h estimadas
 
