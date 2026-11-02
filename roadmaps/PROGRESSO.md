@@ -47,7 +47,7 @@
 
 ### M3 — Incident Response & SOAR · 90–150 h estimadas
 
-- [ ] Criar repositório \`incident-response-soar-lab\` (ainda inexistente).
+- [ ] Criar repositório `incident-response-soar-lab` (ainda inexistente).
 - [ ] Modelo de caso, normalização de alertas e enriquecimento rastreável.
 - [ ] Triagem determinística com contexto e justificativa.
 - [ ] Playbooks em dry-run e aprovação humana para ações de resposta.
@@ -57,7 +57,7 @@
 ### M4 — Cloud Security e IaC · 110–180 h estimadas
 
 - [ ] Escolher AWS **ou** Azure e limitar orçamento/escopo.
-- [ ] Criar repositório \`cloud-security-detection-lab\` (ainda inexistente).
+- [ ] Criar repositório `cloud-security-detection-lab` (ainda inexistente).
 - [ ] Infraestrutura mínima reproduzível e removível por IaC.
 - [ ] IAM de privilégio mínimo com verificação negativa.
 - [ ] Coletar logs e construir três detecções com teste seguro.
@@ -85,7 +85,7 @@
 
 Copie e preencha ao final de cada semana, em um PR ou issue do repositório correspondente:
 
-\`\`\`md
+```md
 ### Semana de AAAA-MM-DD
 
 - Projeto / milestone:
@@ -96,7 +96,7 @@ Copie e preencha ao final de cada semana, em um PR ou issue do repositório corr
 - Resultado: verified | partial | inconclusive | not_tested
 - Limitação ou risco:
 - Próxima ação:
-\`\`\`
+```
 
 ## Regras de integridade de portfólio
 
