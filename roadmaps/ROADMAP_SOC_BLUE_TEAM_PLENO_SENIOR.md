@@ -37,7 +37,7 @@ As estimativas abaixo são **horas adicionais de trabalho prático**, não horas
 
 **Entregáveis:** prova de identidade dos seis documentos no Discover; aceitação formal por regra; última revisão de riscos, limitações e evidências sanitizadas; encerramento documentado da Issue #4 **somente após** validação.
 
-**Critério de aceite:** mesmos campos \`id\`, \`rule.id\`, \`agent.id\`, timestamp UTC para todos os seis eventos nos três estágios. Sem gerar novas simulações desnecessárias, publicar IDs brutos, modificar credenciais ou enfraquecer TLS.
+**Critério de aceite:** mesmos campos `id`, `rule.id`, `agent.id`, timestamp UTC para todos os seis eventos nos três estágios. Sem gerar novas simulações desnecessárias, publicar IDs brutos, modificar credenciais ou enfraquecer TLS.
 
 ### A1. Threat Hunting orientado a hipóteses — 35–60 h
 
@@ -57,7 +57,7 @@ As estimativas abaixo são **horas adicionais de trabalho prático**, não horas
 
 ### A3. Incident Response & SOAR Lab — 90–150 h
 
-**Novo projeto proposto**, ainda não criado: \`incident-response-soar-lab\`.
+**Novo projeto proposto**, ainda não criado: `incident-response-soar-lab`.
 
 **Entregáveis:** fluxo alerta → enriquecimento → classificação → caso → decisão; playbooks de contenção com aprovação humana; ações em **dry-run** por padrão; trilha de auditoria; validação de rollback, duplicatas, timeout e falhas de integração.
 
@@ -65,7 +65,7 @@ As estimativas abaixo são **horas adicionais de trabalho prático**, não horas
 
 ### A4. Cloud Security Detection Lab — 110–180 h
 
-**Novo projeto proposto**, ainda não criado: \`cloud-security-detection-lab\`.
+**Novo projeto proposto**, ainda não criado: `cloud-security-detection-lab`.
 
 **Entregáveis:** escolher **uma** nuvem primeiro (AWS ou Azure); infraestrutura reprodutível por IaC; IAM de privilégio mínimo; logs centralizados; três detecções; procedimento de investigação e remoção de recursos; estimativa de custo e limites de segurança.
 
