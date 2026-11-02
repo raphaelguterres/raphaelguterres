@@ -42,6 +42,8 @@
 - [ ] Atualizar cobertura MITRE ATT&CK **a partir de evidências reais**, mantendo hipóteses como hipóteses até validação.
 - [ ] Publicar estudos de caso sanitizados de M1 e registrar aceite final da fase.
 
+**Revisão real limitada de H01 em 02/11:** o [PR #12](https://github.com/raphaelguterres/threat-hunting-detection-lab/pull/12) adicionou auditor somente leitura e 15 testes. Rodado no arquivo privado existente de seis identidades do Manager, mostrou que a regra **110120 antecedeu 110100 por 3.743,199 segundos**: ordem invertida e intervalo superior a 15 minutos. **Não corrobora H01 nessa pequena amostra**, sem concluir ausência de ameaça; faltam atores, processo-pai e confirmação de criação efetiva da tarefa. A [Issue #9](https://github.com/raphaelguterres/threat-hunting-detection-lab/issues/9) mantém abertas a busca H01 ampliada, H02 e H03 com evidência nativa.
+
 **M1 permanece em andamento:** [Issue #9](https://github.com/raphaelguterres/threat-hunting-detection-lab/issues/9). As 35–60 horas são previsão para o restante dessa etapa, não horas já registradas.
 
 ### M2 — AppSec e DevSecOps · 65–110 h estimadas
