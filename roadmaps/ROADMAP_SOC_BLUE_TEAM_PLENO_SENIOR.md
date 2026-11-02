@@ -12,11 +12,11 @@
 
 | Repositório | Competências demonstradas | Próximo incremento |
 | --- | --- | --- |
-| [Detection Engineering Blue Team](https://github.com/raphaelguterres/detection-engineering-blue-team) | Regras Wazuh, Sysmon, testes de regressão, CI e correlação de alertas | Confirmar os mesmos seis eventos no Discover e fechar a [Issue #4](https://github.com/raphaelguterres/detection-engineering-blue-team/issues/4) |
+| [Detection Engineering Blue Team](https://github.com/raphaelguterres/detection-engineering-blue-team) | Regras Wazuh, Sysmon, testes de regressão, CI e correlação de alertas | **M0 concluído em 02/11:** [6/6 eventos verificados nas três fontes](https://github.com/raphaelguterres/detection-engineering-blue-team/blob/main/docs/phase3-final-three-stage-six-event-acceptance-20261102.md); [Issue #4 encerrada](https://github.com/raphaelguterres/detection-engineering-blue-team/issues/4) |
 | [Threat Hunting & Detection Lab](https://github.com/raphaelguterres/threat-hunting-detection-lab) | Telemetria Windows/Linux, FIM, investigação documentada, MITRE ATT&CK | Evoluir hipóteses, cobertura, tuning e qualidade das investigações |
 | [Assessment AppSec](https://github.com/raphaelguterres/appsec-automatizado) | Recon e avaliação de superfície **autorizada**, triagem, evidência e relatórios | Desenvolver pipeline AppSec com modelagem de ameaças, testes e acompanhamento de correções |
 
-**Marco técnico já comprovado no Detection Engineering:** cinco regras customizadas, regressões documentadas e **6/6 correspondências exatas de identidade Manager → Indexer** (mesmo ID, regra, agente e timestamp UTC). **A confirmação independente dos mesmos documentos no Dashboard Discover ainda está pendente.** Não declarar a Fase 3 encerrada antes disso.
+**Marco M0 concluído em 02/11/2026:** cinco regras customizadas, regressões documentadas e **6/6 identidades exatas em Manager → Indexer → Dashboard Discover**, com mesmo ID original, regra, agente e timestamp UTC. A procedência de cada documento do Discover foi verificada pela interface autenticada e a evidência publicada somente como [relatório agregado sanitizado](https://github.com/raphaelguterres/detection-engineering-blue-team/blob/main/docs/phase3-final-three-stage-six-event-acceptance-20261102.md). A lacuna histórica 27–30/10 continua investigação separada.
 
 ## Visão de esforço e prazos
 
@@ -31,13 +31,13 @@ As estimativas abaixo são **horas adicionais de trabalho prático**, não horas
 
 ## Etapa A — Consolidar competências de pleno (308–515 h)
 
-### A0. Fechamento do Detection Engineering Blue Team — 8–15 h
+### A0. Detection Engineering Blue Team — concluído em 02/11/2026 · 8–15 h originalmente estimadas
 
 **Reutilizar:** [repositório operacional existente](https://github.com/raphaelguterres/detection-engineering-blue-team).
 
-**Entregáveis:** prova de identidade dos seis documentos no Discover; aceitação formal por regra; última revisão de riscos, limitações e evidências sanitizadas; encerramento documentado da Issue #4 **somente após** validação.
+**Entregues:** verificação independente de identidade dos seis documentos no Discover, aceite formal por regra, revisão de escopo e limitações, documentação sanitizada e [encerramento da Issue #4](https://github.com/raphaelguterres/detection-engineering-blue-team/issues/4) após comprovação.
 
-**Critério de aceite:** mesmos campos `id`, `rule.id`, `agent.id`, timestamp UTC para todos os seis eventos nos três estágios. Sem gerar novas simulações desnecessárias, publicar IDs brutos, modificar credenciais ou enfraquecer TLS.
+**Critério de aceite: PASS 6/6.** Mesmos campos `id`, `rule.id`, `agent.id` e timestamp UTC para todos os seis eventos nos três estágios. Nenhum log/ID bruto foi publicado; nenhum cenário adicional ou mudança de regras foi necessário.
 
 ### A1. Threat Hunting orientado a hipóteses — 35–60 h
 
