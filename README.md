@@ -2,82 +2,71 @@
 
 # Raphael Guterres
 
-### Security Engineering · AppSec · Product Development
+### Cybersecurity · Blue Team · Detection Engineering
 
-Transformo telemetria em detecções investigáveis e produtos em sistemas mais seguros.
+Transformo telemetria de endpoints em detecções investigáveis, evidências auditáveis e decisões defensivas responsáveis.
 
-[![Portfólio](https://img.shields.io/badge/Portfólio-guterres.vercel.app-111111?style=flat-square&logo=vercel&logoColor=white)](https://guterres.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-raphaelguterres-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/raphaelguterres)
+[![Threat Hunting Lab](https://img.shields.io/badge/Projeto_principal-Threat_Hunting_%26_Detection_Lab-0A7A4A?style=flat-square)](https://github.com/raphaelguterres/threat-hunting-detection-lab)
 [![Cybersecurity Roadmap BR](https://img.shields.io/badge/Open_Source-Cybersecurity_Roadmap_BR-111111?style=flat-square&logo=github&logoColor=white)](https://github.com/raphaelguterres/cybersecurity-roadmap-br)
-[![Study OS Dashboard](https://img.shields.io/badge/Study_OS-Dashboard-BAF568?style=flat-square&logo=github&logoColor=111111)](https://raphaelguterres.github.io/cybersecurity-roadmap-br/)
+[![Study OS Dashboard](https://img.shields.io/badge/Estudos-Dashboard_de_Ciberseguran%C3%A7a-BAF568?style=flat-square&logo=github&logoColor=111111)](https://raphaelguterres.github.io/cybersecurity-roadmap-br/)
 
 </div>
 
-## Security Engineering
+## Perfil profissional
+
+Atuo com foco em **segurança defensiva**, combinando telemetria, engenharia de detecção e investigação para reduzir incerteza operacional. Meu trabalho prioriza sinais verificáveis, documentação clara e resposta proporcional ao risco — sem transformar alertas isolados em conclusões apressadas.
+
+| Foco | Como aplico |
+| --- | --- |
+| **Threat hunting** | Formulo hipóteses, correlaciono fontes e uso controles negativos antes de classificar um comportamento. |
+| **Detection engineering** | Estruturo regras, telemetria e validações reproduzíveis para que a detecção possa ser revisada e evoluída. |
+| **SIEM e visibilidade** | Investigo o caminho endpoint → Manager → Indexer → Dashboard, distinguindo dado nativo de alerta indexado. |
+| **Resposta orientada por evidências** | Registro contexto, decisão, aprovação humana, critério de sucesso e rollback. |
+
+## Projeto em destaque
 
 ### Threat Hunting & Detection Lab
-> Projeto principal de Segurança Defensiva.
 
 [![Validação do laboratório](https://github.com/raphaelguterres/threat-hunting-detection-lab/actions/workflows/validate-lab.yml/badge.svg)](https://github.com/raphaelguterres/threat-hunting-detection-lab/actions/workflows/validate-lab.yml)
 
-Laboratório operacional de threat hunting e engenharia de detecção com **Wazuh**, telemetria de endpoints Windows e Linux, investigação documentada e mapeamento para **MITRE ATT&CK**.
+Laboratório autoral de **Cyber Defense Engineering** que conecta endpoints Windows e Linux a uma pilha Wazuh, usando Sysmon, Event Channels, logs nativos e File Integrity Monitoring. O objetivo é mostrar o fluxo completo de uma investigação: hipótese, telemetria, detecção, evidência, triagem e decisão.
 
-[Ver repositório](https://github.com/raphaelguterres/threat-hunting-detection-lab) · [Arquitetura](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/main/docs/architecture.md) · [Casos de investigação](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/main/docs/case-study-timelines.md) · [Triagem MITRE](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/main/docs/mitre-triage-t1078-t1021.md)
-
-| Capacidade | Evidência no projeto |
+| Capacidade | Evidência no laboratório |
 | --- | --- |
-| **Detection engineering** | Regras Wazuh versionadas, Sysmon IDs 1/3/11 e validação por CI. |
-| **Threat hunting** | Eventos correlacionados por ativo, usuário, origem, horário e sequência. |
-| **Investigation & triage** | Cinco estudos de caso, playbooks com aprovação humana e registro de decisões. |
-| **ATT&CK-driven defense** | Técnicas MITRE usadas como contexto analítico — não como veredito automático. |
+| **Telemetria de endpoint** | Windows e Linux com Sysmon, Event Channels, auditoria e FIM. |
+| **Detecção e validação** | Regras Wazuh versionadas, testes de contrato, controles negativos e CI. |
+| **Threat hunting** | Hipóteses correlacionadas por ativo, ator, artefato, janela temporal e sequência. |
+| **Investigação e triagem** | Estudos de caso, timelines, playbooks e registro de decisões. |
+| **MITRE ATT&CK** | Técnicas usadas como contexto analítico, sem assumir que correspondem a um incidente. |
+| **Governança de mudança** | Baseline, validação de impacto, gates de evidência, rollback e revisão humana. |
 
-### Stack de segurança
+[Explorar o laboratório](https://github.com/raphaelguterres/threat-hunting-detection-lab) · [Ver arquitetura](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/main/docs/architecture.md) · [Ver estudos de caso](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/main/docs/case-study-timelines.md) · [Ver cobertura MITRE ATT&CK](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/main/docs/mitre-coverage.md)
+
+## Princípios de trabalho
+
+- **Evidência antes de severidade:** um alerta só se torna decisão após correlação de telemetria e contexto operacional.
+- **Detecção revisável:** regras, validações, testes e documentação são versionados para facilitar auditoria e evolução.
+- **Resposta responsável:** qualquer contenção depende de contexto, aprovação humana, critério de sucesso e possibilidade de rollback.
+- **Limites explícitos:** simulações, testes sintéticos e observações parciais não são apresentados como incidentes confirmados.
+
+## Ecossistema técnico
 
 <div align="center">
 
-![Threat Hunting stack](https://skillicons.dev/icons?i=linux,docker,bash,powershell,githubactions,git&theme=dark)
+![Security engineering stack](https://skillicons.dev/icons?i=linux,docker,bash,powershell,python,githubactions,git&theme=dark)
 
-**Wazuh · Sysmon · MITRE ATT&CK · Docker · Kali Linux · Windows Server · GitHub Actions**
+**Wazuh · Sysmon · MITRE ATT&CK · Linux · Windows Server · Docker · Python · PowerShell · GitHub Actions**
 
 </div>
 
-## Como eu trabalho
+## Comunidade e aprendizado aberto
 
-- **Evidência antes de severidade:** um alerta só vira decisão depois de correlacionar telemetria e contexto operacional.
-- **Automação revisável:** regras, validações e documentação vivem no repositório e passam por controle de versão.
-- **Resposta responsável:** contenções exigem contexto, aprovação humana, critério de sucesso e rollback.
+### Cybersecurity Roadmap BR
 
-## Roadmap de evolução em segurança
+Crio e mantenho o **[Cybersecurity Roadmap BR](https://github.com/raphaelguterres/cybersecurity-roadmap-br)**, uma iniciativa open source e gratuita para a comunidade brasileira de cibersegurança. O projeto reúne trilhas de estudo, laboratórios guiados, glossário e recursos para diferentes áreas da segurança.
 
-Mantenho uma trilha pública de desenvolvimento em **SOC / Blue Team, Detection Engineering, Incident Response, AppSec e Cloud Security**, com projetos reais, horas **estimadas** e critérios de conclusão baseados em testes e evidências — sem confundir projetos com experiência profissional em produção.
-
-**[Ver roadmap de competências e projetos](roadmaps/ROADMAP_SOC_BLUE_TEAM_PLENO_SENIOR.md)** · **[Acompanhar progresso verificável](roadmaps/PROGRESSO.md)**
-
-## Open Source & Comunidade
-
-### 🛡️ Cybersecurity Roadmap BR
-
-Criei e mantenho o **[Cybersecurity Roadmap BR](https://github.com/raphaelguterres/cybersecurity-roadmap-br)**, uma iniciativa **open source e gratuita** para fortalecer a comunidade brasileira de cibersegurança, do primeiro contato com a área à especialização técnica.
-
-**O que você encontra:** 11 trilhas de estudo (Fundamentos, Redes, Programação, SOC/Blue Team, AppSec, Pentest Ético, Cloud/DevSecOps, DFIR, GRC/IAM, Threat Intelligence e Carreira), roadmap de **24 semanas**, laboratórios guiados, glossário e recursos de aprendizado.
-
-A comunidade pode contribuir com **Issues, Pull Requests e Discussions** para revisar o material, compartilhar experiências e criar novos exercícios com escopo autorizado.
-
-**[🖥️ Dashboard interativo](https://raphaelguterres.github.io/cybersecurity-roadmap-br/)** · **[📍 Começar o roadmap](https://github.com/raphaelguterres/cybersecurity-roadmap-br/blob/main/ROADMAP.md)** · **[🧪 Laboratórios](https://github.com/raphaelguterres/cybersecurity-roadmap-br/tree/main/labs)** · **[🤝 Participar da comunidade](https://github.com/raphaelguterres/cybersecurity-roadmap-br/discussions)**
-
-## Produtos digitais
-
-### Eventos · lista e ingresso
-
-- **[NIGHT'S LISTA](https://nights-lista.vercel.app)** — lista digital para casas noturnas e ingresso com QR.
-- **[ATO LISTAS](https://ato-listas.vercel.app)** — listas para festas, link compartilhável e portaria ao vivo.
-- **[DECK 22](https://apresentacaodeck22.vercel.app)** — gestão de convidados, painel e lista ao vivo.
-
-### Web & landing
-
-- **[Survey](https://survey-landing-ashy.vercel.app)** — landing para topografia, georreferenciamento e hidrologia com Three.js e GSAP.
-
-<br/>
+[Abrir roadmap](https://github.com/raphaelguterres/cybersecurity-roadmap-br/blob/main/ROADMAP.md) · [Explorar laboratórios](https://github.com/raphaelguterres/cybersecurity-roadmap-br/tree/main/labs) · [Ver dashboard](https://raphaelguterres.github.io/cybersecurity-roadmap-br/) · [Participar das discussões](https://github.com/raphaelguterres/cybersecurity-roadmap-br/discussions)
 
 <div align="center">
 
