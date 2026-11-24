@@ -82,12 +82,20 @@ Os documentos de evidência e seus aceites estão no workspace do projeto VELAR.
 
 - [x] Criar repositório [incident-response-soar-lab](https://github.com/raphaelguterres/incident-response-soar-lab).
 - [ ] Modelo de caso, normalização de alertas e enriquecimento rastreável.
-- [ ] Triagem determinística com contexto e justificativa.
-- [ ] Playbooks em dry-run e aprovação humana para ações de resposta.
+- [x] Triagem determinística com contexto e justificativa.
+- [x] Playbooks em dry-run e aprovação humana para ações de resposta.
 - [ ] Testar falhas, repetição de eventos, rollback e trilha de auditoria.
 - [ ] Relatório final com métricas do **ambiente de laboratório**, sem confundir com produção.
 
 **Registro de 24/11/2026.** Os seis passos da rodada M3 no escritório receberam aceite, incluindo a métrica de duplicação. O repositório privado reúne o README, as seis evidências e um protótipo local com dados sintéticos, triagem determinística, revisão humana, resposta em dry-run e auditoria. Sete testes locais passaram, incluindo duplicação, recusa, rollback de falha de auditoria e reabertura do SQLite. A revisão técnica do marco segue pelo checklist acima. [README e evidências](https://github.com/raphaelguterres/incident-response-soar-lab/blob/c43b8b8b358e6416ddee09fbc8cb67bcf51970a1/README.md).
+
+**Revisão técnica de 24/11/2026.** Os sete testes do commit c43b8b8 passaram em uma cópia local com fixtures sintéticas. A triagem determinística e o dry-run com decisão humana foram verificados. O M3 permanece em revisão técnica. [Evidência da revisão](https://github.com/raphaelguterres/incident-response-soar-lab/blob/fd1a4fc612b972a141b2c03a5b29c8b5e462adff/docs/M3-REVISAO-TECNICA.md).
+
+Pendências para concluir o marco:
+
+1. Demonstrar a normalização de uma fixture bruta para os campos canônicos e testar a preservação do identificador e da fonte.
+2. Sinalizar revisão pendente no caso ao receber uma entrega divergente depois do encaminhamento. A auditoria já registra a divergência. Falta refletir a pendência no caso e testar a preservação do encaminhamento original sem repeti-lo.
+3. Reexecutar a suíte e atualizar o relatório final do laboratório com os resultados e os limites da amostra.
 
 ### M4 — Cloud Security e IaC · 110–180 h estimadas
 
