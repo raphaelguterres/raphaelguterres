@@ -6,7 +6,7 @@
 
 ## Situação atual
 
-Três dos cinco marcos foram concluídos. O teste de privilégio mínimo no IAM foi aceito. A prioridade atual é validar três detecções com eventos de gerenciamento do CloudTrail em Ohio.
+Três dos cinco marcos foram concluídos. O M4 tem cinco de seis critérios técnicos concluídos. A prioridade atual é consolidar a operação, o encerramento e o faturamento do laboratório AWS.
 
 | Marco | Estado | Evidência |
 | --- | --- | --- |
@@ -14,7 +14,7 @@ Três dos cinco marcos foram concluídos. O teste de privilégio mínimo no IAM 
 | M1 · Threat hunting | Concluído | Três hipóteses validadas em laboratório. O proprietário aceitou os 17 itens em 10/11. [Revisão final](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/59eeef6/docs/m1-final-review-20261110.md) |
 | M2 · AppSec e DevSecOps | Em andamento | Rodada VELAR aceita. O checklist técnico continua aberto. [Caso público do formulário em homologação](https://github.com/raphaelguterres/cloudflare-429-edge-lab/blob/main/docs/evidencias.md) |
 | M3 · Resposta a incidentes | Concluído em laboratório | Dez testes com dados sintéticos. O relatório completo tem acesso restrito. [Resumo da revisão](#m3--incident-response--soar--90150-h-estimadas) |
-| M4 · Segurança em nuvem | Em andamento | Ciclo de criação e remoção via CloudFormation e teste de privilégio mínimo aceitos. A validação das três detecções do CloudTrail segue aberta. [Aceite do IAM em Ohio](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/dd2ced0ebfb59da4a15867ec991c5682e52c2f01/docs/VALIDACAO-IAM-S3-OHIO.md#aceite) |
+| M4 · Segurança em nuvem | Em andamento | Ciclo de criação e remoção via CloudFormation e teste de privilégio mínimo aceitos. As três detecções do CloudTrail foram validadas em Ohio. [Evidência do CloudTrail](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/635e7e40b13012a4159c4ed1f19a1b4d820eed2b/docs/VALIDACAO-CLOUDTRAIL-S3-OHIO.md) · [Aceite do IAM em Ohio](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/dd2ced0ebfb59da4a15867ec991c5682e52c2f01/docs/VALIDACAO-IAM-S3-OHIO.md#aceite) |
 
 ## Checklist de milestones
 
@@ -122,15 +122,14 @@ Pendências encontradas na revisão inicial, encerradas na revalidação abaixo:
 - [x] Criar repositório [cloud-security-detection-lab](https://github.com/raphaelguterres/cloud-security-detection-lab) no GitHub. [README, template e evidências no commit publicado](https://github.com/raphaelguterres/cloud-security-detection-lab/commit/288a42b64fb2404f0ba23424847120a418b6b6ba).
 - [x] Infraestrutura mínima reproduzível e removível por IaC. Criação e remoção em Ohio [verificadas e aceitas](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/1304d94037e90db1179bc4f40baabc078213973c/docs/VALIDACAO-IAC-OHIO.md#aceite).
 - [x] IAM de privilégio mínimo com verificação negativa. Leitura permitida e escrita negada na mesma sessão em Ohio, [aceitas pelo proprietário](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/dd2ced0ebfb59da4a15867ec991c5682e52c2f01/docs/VALIDACAO-IAM-S3-OHIO.md#aceite).
-- [ ] Coletar logs e construir três detecções com teste seguro. Validar três detecções com eventos reais de gerenciamento do CloudTrail em Ohio.
+- [x] Coletar eventos reais de gerenciamento do CloudTrail em Ohio. O detector identificou `PutBucketPublicAccessBlock`, `PutBucketPolicy` e `DeleteBucket` no mesmo bucket de teste. [Resultado e reprodução](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/635e7e40b13012a4159c4ed1f19a1b4d820eed2b/docs/VALIDACAO-CLOUDTRAIL-S3-OHIO.md)
 - [ ] Documentar custos, arquitetura, operação e teardown.
 
-**Revisão de 24/11/2026.** Os seis passos documentais do escritório têm aceite, incluindo o procedimento de encerramento do bucket. O checklist técnico tem quatro de seis critérios concluídos. O README, o template do bucket privado e as [evidências sanitizadas](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/288a42b64fb2404f0ba23424847120a418b6b6ba/docs/EVIDENCIAS-M4.md) estão publicados.
+**Revisão de 24/11/2026.** Os seis passos documentais do escritório têm aceite, incluindo o procedimento de encerramento do bucket. O checklist técnico tem cinco de seis critérios concluídos. O README, o template do bucket privado e as [evidências sanitizadas](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/288a42b64fb2404f0ba23424847120a418b6b6ba/docs/EVIDENCIAS-M4.md) estão publicados.
 
 O proprietário aceitou o ciclo de criação e remoção em Ohio em 24/11/2026. A checagem das proteções em execução permaneceu inconclusiva. [Registro de aceite](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/1304d94037e90db1179bc4f40baabc078213973c/docs/VALIDACAO-IAC-OHIO.md#aceite)
 
-1. **Próxima prioridade no escritório · Infraestrutura.** Complementar o sinal `PutBucketPolicy`, já testado com entradas fictícias, com duas detecções adicionais. Validar as três com eventos reais de gerenciamento e testes seguros, mantendo o bloqueio de acesso público.
-2. Consolidar arquitetura, operação e remoção no relatório final. Vincular o inventário final ao recurso provisionado e conferir custos após a atualização do faturamento.
+**Próxima prioridade no escritório · Infraestrutura.** Consolidar arquitetura, operação e remoção no relatório final. Vincular o inventário final ao recurso provisionado e conferir custos após a atualização do faturamento.
 
 Para os próximos testes em nuvem, o escopo exige confirmar o plano gratuito, os recursos autorizados e o limite de US$ 0 em cobranças.
 
