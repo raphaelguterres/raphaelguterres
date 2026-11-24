@@ -64,6 +64,20 @@
 - [ ] Dois ciclos evidenciados de achado → correção → teste de regressão.
 - [ ] Runbook de escopo, triagem, priorização e comunicação técnica.
 
+<!-- office:accepted-round M2 -->
+
+**Rodada VELAR concluída e aceita em 24/11/2026.** O proprietário aceitou os nove passos executados no escritório VELAR. A próxima prioridade operacional é M3.
+
+| Evidência aceita | Resultado registrado |
+| --- | --- |
+| Modelagem de ameaças do formulário de avaliação | Mapa da entrada, fronteira visitante–API, verificação de consentimento em homologação e revisão do risco de envios repetidos. |
+| Controle de CI e rastreabilidade de dependência | Etapa de verificação de segredos e arquivos sensíveis concluída com sucesso no CI do site. Next.js 16.4.6 do portal rastreado do manifesto e lockfile à entrada SPDX do SBOM. |
+| Limites de validação | Homologação em loopback, dados fictícios, SQLite descartável, teto de 12 chamadas por sessão e parada para revisão definida. |
+| Ciclo de correção e regressão | Worker temporário de homologação corrigido e retestado. O envio limitado retornou 429 sem gravação e um novo envio após a janela retornou 201. |
+| Triagem | Etapa com entrada, critérios de decisão e evidência para revisão, aplicada ao caso de homologação. |
+
+Os documentos de evidência e seus aceites estão no workspace do projeto VELAR. O checklist técnico acima continua sendo o registro dos critérios integrais da trilha. A rodada aceita cobriu um ciclo de correção e uma etapa do runbook. A cobertura de CI auditável, o DAST da trilha, o segundo ciclo independente e o runbook completo seguem no checklist.
+
 ### M3 — Incident Response & SOAR · 90–150 h estimadas
 
 - [ ] Criar repositório `incident-response-soar-lab` (ainda inexistente).
