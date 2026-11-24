@@ -105,17 +105,18 @@ Pendências encontradas na revisão inicial, encerradas na revalidação abaixo:
 
 - [x] Escolher AWS **ou** Azure e limitar orçamento/escopo. AWS Free Plan em Ohio (`us-east-2`), com limite de US$ 0 em cobranças.
 - [x] Criar repositório [cloud-security-detection-lab](https://github.com/raphaelguterres/cloud-security-detection-lab) no GitHub. [README, template e evidências no commit publicado](https://github.com/raphaelguterres/cloud-security-detection-lab/commit/288a42b64fb2404f0ba23424847120a418b6b6ba).
-- [ ] Infraestrutura mínima reproduzível e removível por IaC. Ciclo em Ohio verificado, aguardando aceite.
-- [ ] IAM de privilégio mínimo com verificação negativa.
+- [x] Infraestrutura mínima reproduzível e removível por IaC. Criação e remoção em Ohio [verificadas e aceitas](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/1304d94037e90db1179bc4f40baabc078213973c/docs/VALIDACAO-IAC-OHIO.md#aceite).
+- [ ] IAM de privilégio mínimo com verificação negativa. Validar leitura permitida e escrita negada no S3 com a mesma identidade.
 - [ ] Coletar logs e construir três detecções com teste seguro.
 - [ ] Documentar custos, arquitetura, operação e teardown.
 
-**Revisão de 24/11/2026.** Os seis passos documentais do escritório têm aceite, incluindo o procedimento de encerramento do bucket. O checklist técnico tem dois de seis critérios concluídos. O README, o template do bucket privado e as [evidências sanitizadas](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/288a42b64fb2404f0ba23424847120a418b6b6ba/docs/EVIDENCIAS-M4.md) estão publicados.
+**Revisão de 24/11/2026.** Os seis passos documentais do escritório têm aceite, incluindo o procedimento de encerramento do bucket. O checklist técnico tem três de seis critérios concluídos. O README, o template do bucket privado e as [evidências sanitizadas](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/288a42b64fb2404f0ba23424847120a418b6b6ba/docs/EVIDENCIAS-M4.md) estão publicados.
 
-1. **Próxima prioridade no escritório · Infraestrutura.** Revisar e aceitar a evidência de criação e remoção do mesmo bucket em Ohio. [Registro sanitizado](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/e9140cd63498b63211bca0a712510debccc1f13c/docs/VALIDACAO-IAC-OHIO.md#aceite)
-2. Demonstrar leitura permitida e escrita negada para a mesma identidade IAM.
-3. Complementar o sinal `PutBucketPolicy`, já testado com entradas fictícias, com duas detecções adicionais. Validar as três com eventos reais de gerenciamento e testes seguros, mantendo o bloqueio de acesso público.
-4. Consolidar arquitetura, operação e remoção no relatório final. Vincular o inventário final ao recurso provisionado e conferir custos após a atualização do faturamento.
+O proprietário aceitou o ciclo de criação e remoção em Ohio em 24/11/2026. A checagem das proteções em execução permaneceu inconclusiva. [Registro de aceite](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/1304d94037e90db1179bc4f40baabc078213973c/docs/VALIDACAO-IAC-OHIO.md#aceite)
+
+1. **Próxima prioridade no escritório · Infraestrutura.** Demonstrar leitura permitida e escrita negada para a mesma identidade IAM.
+2. Complementar o sinal `PutBucketPolicy`, já testado com entradas fictícias, com duas detecções adicionais. Validar as três com eventos reais de gerenciamento e testes seguros, mantendo o bloqueio de acesso público.
+3. Consolidar arquitetura, operação e remoção no relatório final. Vincular o inventário final ao recurso provisionado e conferir custos após a atualização do faturamento.
 
 A revisão e a publicação foram feitas fora da AWS. O ensaio em nuvem depende de confirmar o Free Plan ativo, os recursos autorizados e o limite de US$ 0 em cobranças.
 
