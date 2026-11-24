@@ -80,12 +80,14 @@ Os documentos de evidência e seus aceites estão no workspace do projeto VELAR.
 
 ### M3 — Incident Response & SOAR · 90–150 h estimadas
 
-- [ ] Criar repositório `incident-response-soar-lab` (ainda inexistente).
+- [x] Criar repositório [incident-response-soar-lab](https://github.com/raphaelguterres/incident-response-soar-lab).
 - [ ] Modelo de caso, normalização de alertas e enriquecimento rastreável.
 - [ ] Triagem determinística com contexto e justificativa.
 - [ ] Playbooks em dry-run e aprovação humana para ações de resposta.
 - [ ] Testar falhas, repetição de eventos, rollback e trilha de auditoria.
 - [ ] Relatório final com métricas do **ambiente de laboratório**, sem confundir com produção.
+
+**Registro de 24/11/2026.** Os seis passos da rodada M3 no escritório receberam aceite, incluindo a métrica de duplicação. O repositório privado reúne o README, as seis evidências e um protótipo local com dados sintéticos, triagem determinística, revisão humana, resposta em dry-run e auditoria. Sete testes locais passaram, incluindo duplicação, recusa, rollback de falha de auditoria e reabertura do SQLite. A revisão técnica do marco segue pelo checklist acima. [README e evidências](https://github.com/raphaelguterres/incident-response-soar-lab/blob/c43b8b8b358e6416ddee09fbc8cb67bcf51970a1/README.md).
 
 ### M4 — Cloud Security e IaC · 110–180 h estimadas
 
