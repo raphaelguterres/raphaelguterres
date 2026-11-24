@@ -15,7 +15,9 @@
 | Threat Hunting Lab | **Projeto existente; aprofundamento planejado** | [Repositório](https://github.com/raphaelguterres/threat-hunting-detection-lab) |
 | Assessment AppSec | **Projeto existente; integração DevSecOps planejada** | [Repositório](https://github.com/raphaelguterres/appsec-automatizado) |
 | Incident Response & SOAR Lab | **Validado em laboratório** | [Relatório final](https://github.com/raphaelguterres/incident-response-soar-lab/blob/ff11f9bb0704c67d3c6a365323f0145364e59f15/docs/M3-REVISAO-TECNICA.md) |
-| Cloud Security Detection Lab | **Não iniciado** | Criar repositório próprio quando esta etapa começar |
+| Cloud Security Detection Lab | **Em andamento** | AWS Free Plan em Ohio, escopo aceito e repositório pendente de publicação |
+
+**Escritório VELAR · 3 de 5 marcos concluídos.** M0, M1 e M3 concluídos. Rodada VELAR do M2 aceita, com checklist técnico aberto. M4 em foco na área de Infraestrutura.
 
 ## Checklist de milestones
 
@@ -101,12 +103,22 @@ Pendências encontradas na revisão inicial, encerradas na revalidação abaixo:
 
 ### M4 — Cloud Security e IaC · 110–180 h estimadas
 
-- [ ] Escolher AWS **ou** Azure e limitar orçamento/escopo.
-- [ ] Criar repositório `cloud-security-detection-lab` (ainda inexistente).
+- [x] Escolher AWS **ou** Azure e limitar orçamento/escopo. AWS Free Plan em Ohio (`us-east-2`), com limite de US$ 0 em cobranças.
+- [ ] Criar repositório `cloud-security-detection-lab` no GitHub.
 - [ ] Infraestrutura mínima reproduzível e removível por IaC.
 - [ ] IAM de privilégio mínimo com verificação negativa.
 - [ ] Coletar logs e construir três detecções com teste seguro.
 - [ ] Documentar custos, arquitetura, operação e teardown.
+
+**Revisão de 24/11/2026.** Os seis passos documentais do escritório têm aceite, incluindo o procedimento de encerramento do bucket. O checklist técnico tem um de seis critérios concluídos. O README e o template do bucket privado existem localmente.
+
+1. **Próxima prioridade no escritório · Infraestrutura.** Publicar o repositório do laboratório com o README, o template e as referências de evidência.
+2. Registrar a criação, a conferência e a remoção da stack e do mesmo bucket em Ohio.
+3. Demonstrar leitura permitida e escrita negada para a mesma identidade IAM.
+4. Complementar o sinal `PutBucketPolicy`, já testado com entradas fictícias, com duas detecções adicionais. Validar as três com eventos reais de gerenciamento e testes seguros, mantendo o bloqueio de acesso público.
+5. Consolidar arquitetura, operação e remoção no relatório final. Vincular o inventário final ao recurso provisionado e conferir custos após a atualização do faturamento.
+
+A revisão foi documental. O ensaio em nuvem depende de confirmar o Free Plan ativo, os recursos autorizados e o limite de US$ 0 em cobranças.
 
 ### Etapa avançada — somente após a base
 
