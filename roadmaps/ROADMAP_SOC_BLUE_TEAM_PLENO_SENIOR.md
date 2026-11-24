@@ -41,6 +41,8 @@ As estimativas abaixo são **horas adicionais de trabalho prático**, não horas
 
 ### A1. Threat Hunting orientado a hipóteses — 35–60 h
 
+**Estado em 24/11/2026 · M1 concluído.** O proprietário aceitou as 17 evidências. [Revisão final](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/59eeef6/docs/m1-final-review-20261110.md)
+
 **Reutilizar:** [Threat Hunting & Detection Lab](https://github.com/raphaelguterres/threat-hunting-detection-lab).
 
 **Entregáveis:** três novas investigações com hipótese, fonte de telemetria, linha do tempo, interpretação, alternativas benignas e resultado; matriz de cobertura ATT&CK; tuning de detecções e análise de falsos positivos.
@@ -48,6 +50,8 @@ As estimativas abaixo são **horas adicionais de trabalho prático**, não horas
 **Critério de aceite:** cada caso deve permitir reproduzir a investigação em ambiente autorizado com procedimento, dado de teste seguro e limitações explícitas. Não tratar cenários simulados como incidentes reais.
 
 ### A2. AppSec e DevSecOps verificáveis — 65–110 h
+
+**Estado em 24/11/2026 · Rodada VELAR do M2 aceita.** Os critérios técnicos restantes estão no [acompanhamento de evidências](PROGRESSO.md).
 
 **Reutilizar:** [Assessment AppSec](https://github.com/raphaelguterres/appsec-automatizado).
 
@@ -57,7 +61,7 @@ As estimativas abaixo são **horas adicionais de trabalho prático**, não horas
 
 ### A3. Incident Response & SOAR Lab — 90–150 h
 
-**Novo projeto proposto**, ainda não criado: `incident-response-soar-lab`.
+**Estado em 24/11/2026 · M3 concluído.** [Repositório do laboratório](https://github.com/raphaelguterres/incident-response-soar-lab) · [Relatório técnico](https://github.com/raphaelguterres/incident-response-soar-lab/blob/ff11f9bb0704c67d3c6a365323f0145364e59f15/docs/M3-REVISAO-TECNICA.md)
 
 **Entregáveis:** fluxo alerta → enriquecimento → classificação → caso → decisão; playbooks de contenção com aprovação humana; ações em **dry-run** por padrão; trilha de auditoria; validação de rollback, duplicatas, timeout e falhas de integração.
 
@@ -65,7 +69,7 @@ As estimativas abaixo são **horas adicionais de trabalho prático**, não horas
 
 ### A4. Cloud Security Detection Lab — 110–180 h
 
-**Novo projeto proposto**, ainda não criado: `cloud-security-detection-lab`.
+**Estado em 24/11/2026 · M4 em andamento.** AWS Free Plan em Ohio (`us-east-2`), com limite de US$ 0 em cobranças. A Infraestrutura é a área em foco no escritório VELAR. A próxima prioridade é publicar `cloud-security-detection-lab`. [Critérios técnicos e evidências](PROGRESSO.md#m4--cloud-security-e-iac--110180-h-estimadas)
 
 **Entregáveis:** escolher **uma** nuvem primeiro (AWS ou Azure); infraestrutura reprodutível por IaC; IAM de privilégio mínimo; logs centralizados; três detecções; procedimento de investigação e remoção de recursos; estimativa de custo e limites de segurança.
 
