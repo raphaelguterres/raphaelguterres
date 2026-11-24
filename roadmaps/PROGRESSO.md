@@ -1,6 +1,6 @@
 # Acompanhamento de progresso | SOC / Blue Team / Security Engineering
 
-> **Última atualização:** 02/11/2026. Os checkboxes abaixo só mudam com evidência real. Esta página acompanha **projetos e competências**, não concede níveis profissionais.
+> **Última atualização:** 24/11/2026. Os checkboxes abaixo só mudam com evidência real. Esta página acompanha **projetos e competências**, não concede níveis profissionais.
 
 [Roadmap completo e estimativas de horas](ROADMAP_SOC_BLUE_TEAM_PLENO_SENIOR.md)
 
@@ -14,7 +14,7 @@
 | Manager → Indexer → Discover, mesma identidade original | **6/6 concluído — 5/5 regras** | [Aceite operacional](https://github.com/raphaelguterres/detection-engineering-blue-team/blob/main/docs/phase3-final-three-stage-six-event-acceptance-20261102.md) |
 | Threat Hunting Lab | **Projeto existente; aprofundamento planejado** | [Repositório](https://github.com/raphaelguterres/threat-hunting-detection-lab) |
 | Assessment AppSec | **Projeto existente; integração DevSecOps planejada** | [Repositório](https://github.com/raphaelguterres/appsec-automatizado) |
-| Incident Response & SOAR Lab | **Não iniciado** | Criar repositório próprio quando esta etapa começar |
+| Incident Response & SOAR Lab | **Validado em laboratório** | [Relatório final](https://github.com/raphaelguterres/incident-response-soar-lab/blob/ff11f9bb0704c67d3c6a365323f0145364e59f15/docs/M3-REVISAO-TECNICA.md) |
 | Cloud Security Detection Lab | **Não iniciado** | Criar repositório próprio quando esta etapa começar |
 
 ## Checklist de milestones
@@ -81,21 +81,23 @@ Os documentos de evidência e seus aceites estão no workspace do projeto VELAR.
 ### M3 — Incident Response & SOAR · 90–150 h estimadas
 
 - [x] Criar repositório [incident-response-soar-lab](https://github.com/raphaelguterres/incident-response-soar-lab).
-- [ ] Modelo de caso, normalização de alertas e enriquecimento rastreável.
+- [x] Modelo de caso, normalização de alertas e enriquecimento rastreável.
 - [x] Triagem determinística com contexto e justificativa.
 - [x] Playbooks em dry-run e aprovação humana para ações de resposta.
-- [ ] Testar falhas, repetição de eventos, rollback e trilha de auditoria.
-- [ ] Relatório final com métricas do **ambiente de laboratório**, sem confundir com produção.
+- [x] Testar falhas, repetição de eventos, rollback e trilha de auditoria.
+- [x] Relatório final com métricas do **ambiente de laboratório**, sem confundir com produção.
 
 **Registro de 24/11/2026.** Os seis passos da rodada M3 no escritório receberam aceite, incluindo a métrica de duplicação. O repositório privado reúne o README, as seis evidências e um protótipo local com dados sintéticos, triagem determinística, revisão humana, resposta em dry-run e auditoria. Sete testes locais passaram, incluindo duplicação, recusa, rollback de falha de auditoria e reabertura do SQLite. A revisão técnica do marco segue pelo checklist acima. [README e evidências](https://github.com/raphaelguterres/incident-response-soar-lab/blob/c43b8b8b358e6416ddee09fbc8cb67bcf51970a1/README.md).
 
-**Revisão técnica de 24/11/2026.** Os sete testes do commit c43b8b8 passaram em uma cópia local com fixtures sintéticas. A triagem determinística e o dry-run com decisão humana foram verificados. O M3 permanece em revisão técnica. [Evidência da revisão](https://github.com/raphaelguterres/incident-response-soar-lab/blob/fd1a4fc612b972a141b2c03a5b29c8b5e462adff/docs/M3-REVISAO-TECNICA.md).
+**Revisão inicial de 24/11/2026.** Os sete testes do commit c43b8b8 passaram em uma cópia local com fixtures sintéticas. A triagem determinística e o dry-run com decisão humana foram verificados. Naquele momento, o M3 ficou em revisão técnica. [Evidência da revisão](https://github.com/raphaelguterres/incident-response-soar-lab/blob/fd1a4fc612b972a141b2c03a5b29c8b5e462adff/docs/M3-REVISAO-TECNICA.md).
 
-Pendências para concluir o marco:
+Pendências encontradas na revisão inicial, encerradas na revalidação abaixo:
 
 1. Demonstrar a normalização de uma fixture bruta para os campos canônicos e testar a preservação do identificador e da fonte.
 2. Sinalizar revisão pendente no caso ao receber uma entrega divergente depois do encaminhamento. A auditoria já registra a divergência. Falta refletir a pendência no caso e testar a preservação do encaminhamento original sem repeti-lo.
 3. Reexecutar a suíte e atualizar o relatório final do laboratório com os resultados e os limites da amostra.
+
+**M3 concluído em 24/11/2026.** Os 10 testes do commit 9a52ba9 passaram. A entrada bruta preserva identidade e origem e é convertida para o modelo canônico. Uma nova entrega divergente marca o caso como pendente de revisão e preserva o único encaminhamento anterior. O relatório apresenta os resultados, a métrica de duplicação e os limites do ensaio sintético. A próxima prioridade é M4. [Relatório final do laboratório](https://github.com/raphaelguterres/incident-response-soar-lab/blob/ff11f9bb0704c67d3c6a365323f0145364e59f15/docs/M3-REVISAO-TECNICA.md).
 
 ### M4 — Cloud Security e IaC · 110–180 h estimadas
 
