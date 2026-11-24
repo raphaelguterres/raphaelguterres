@@ -6,7 +6,7 @@
 
 ## Situação atual
 
-Três dos cinco marcos foram concluídos. A prioridade atual é a revisão do teste de permissões IAM na AWS.
+Três dos cinco marcos foram concluídos. O teste de privilégio mínimo no IAM foi aceito. A prioridade atual é validar três detecções com eventos de gerenciamento do CloudTrail em Ohio.
 
 | Marco | Estado | Evidência |
 | --- | --- | --- |
@@ -14,7 +14,7 @@ Três dos cinco marcos foram concluídos. A prioridade atual é a revisão do te
 | M1 · Threat hunting | Concluído | Três hipóteses validadas em laboratório. O proprietário aceitou os 17 itens em 10/11. [Revisão final](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/59eeef6/docs/m1-final-review-20261110.md) |
 | M2 · AppSec e DevSecOps | Em andamento | Rodada VELAR aceita. O checklist técnico continua aberto. [Caso público do formulário em homologação](https://github.com/raphaelguterres/cloudflare-429-edge-lab/blob/main/docs/evidencias.md) |
 | M3 · Resposta a incidentes | Concluído em laboratório | Dez testes com dados sintéticos. O relatório completo tem acesso restrito. [Resumo da revisão](#m3--incident-response--soar--90150-h-estimadas) |
-| M4 · Segurança em nuvem | Em andamento | Ciclo de criação e remoção via CloudFormation aceito. O teste real de IAM aguarda aceite. [Resultado em Ohio](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/4825ced03e17ecfe75bfcbcff8440c1920074f6d/docs/VALIDACAO-IAM-S3-OHIO.md#aceite) |
+| M4 · Segurança em nuvem | Em andamento | Ciclo de criação e remoção via CloudFormation e teste de privilégio mínimo aceitos. A validação das três detecções do CloudTrail segue aberta. [Aceite do IAM em Ohio](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/dd2ced0ebfb59da4a15867ec991c5682e52c2f01/docs/VALIDACAO-IAM-S3-OHIO.md#aceite) |
 
 ## Checklist de milestones
 
