@@ -1,23 +1,20 @@
-# Acompanhamento de progresso | SOC / Blue Team / Security Engineering
+# Progresso em cibersegurança
 
-> **Última atualização:** 24/11/2026. Os checkboxes abaixo só mudam com evidência real. Esta página acompanha **projetos e competências**, não concede níveis profissionais.
+[Perfil](../README.md) · [Plano de estudos e estimativas](ROADMAP_SOC_BLUE_TEAM_PLENO_SENIOR.md)
 
-[Roadmap completo e estimativas de horas](ROADMAP_SOC_BLUE_TEAM_PLENO_SENIOR.md)
+**Última atualização:** 24/11/2026. Cada marco reúne entregas, testes e o registro de aceite.
 
 ## Situação atual
 
-| Marco | Situação | Evidência |
-| --- | --- | --- |
-| Laboratório Wazuh com agentes e detecções | **Validado** | [Detection Engineering Blue Team](https://github.com/raphaelguterres/detection-engineering-blue-team) |
-| Cinco regras customizadas e regressões versionadas | **Validado** | [README técnico](https://github.com/raphaelguterres/detection-engineering-blue-team#estado-da-fase-3) |
-| Manager → Indexer, mesma identidade original | **6/6 concluído** | [Relatório sanitizado](https://github.com/raphaelguterres/detection-engineering-blue-team/blob/main/docs/phase3-manager-indexer-exact-correlation-20261102.md) |
-| Manager → Indexer → Discover, mesma identidade original | **6/6 concluído — 5/5 regras** | [Aceite operacional](https://github.com/raphaelguterres/detection-engineering-blue-team/blob/main/docs/phase3-final-three-stage-six-event-acceptance-20261102.md) |
-| Threat Hunting Lab | **Projeto existente; aprofundamento planejado** | [Repositório](https://github.com/raphaelguterres/threat-hunting-detection-lab) |
-| Assessment AppSec | **Projeto existente; integração DevSecOps planejada** | [Repositório](https://github.com/raphaelguterres/appsec-automatizado) |
-| Incident Response & SOAR Lab | **Validado em laboratório** | [Relatório final](https://github.com/raphaelguterres/incident-response-soar-lab/blob/ff11f9bb0704c67d3c6a365323f0145364e59f15/docs/M3-REVISAO-TECNICA.md) |
-| Cloud Security Detection Lab | **Em andamento** | AWS Free Plan em Ohio, escopo aceito e [repositório publicado](https://github.com/raphaelguterres/cloud-security-detection-lab) |
+Três dos cinco marcos foram concluídos. A prioridade atual é a revisão do teste de permissões IAM na AWS.
 
-**Escritório VELAR · 3 de 5 marcos concluídos.** M0, M1 e M3 concluídos. Rodada VELAR do M2 aceita, com checklist técnico aberto. M4 em foco na área de Infraestrutura.
+| Marco | Estado | Evidência |
+| --- | --- | --- |
+| M0 · Engenharia de detecção | Concluído | Cinco regras Wazuh com regressões e seis alertas conferidos no Manager, no Indexer e no Discover. [Aceite das três fontes](https://github.com/raphaelguterres/detection-engineering-blue-team/blob/main/docs/phase3-final-three-stage-six-event-acceptance-20261102.md) |
+| M1 · Threat hunting | Concluído | Três hipóteses validadas em laboratório. O proprietário aceitou os 17 itens em 10/11. [Revisão final](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/59eeef6/docs/m1-final-review-20261110.md) |
+| M2 · AppSec e DevSecOps | Em andamento | Rodada VELAR aceita. O checklist técnico continua aberto. [Caso público do formulário em homologação](https://github.com/raphaelguterres/cloudflare-429-edge-lab/blob/main/docs/evidencias.md) |
+| M3 · Resposta a incidentes | Concluído em laboratório | Dez testes com dados sintéticos. O relatório completo tem acesso restrito. [Resumo da revisão](#m3--incident-response--soar--90150-h-estimadas) |
+| M4 · Segurança em nuvem | Em andamento | Ciclo de criação e remoção via CloudFormation aceito. O teste real de IAM aguarda aceite. [Resultado em Ohio](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/4825ced03e17ecfe75bfcbcff8440c1920074f6d/docs/VALIDACAO-IAM-S3-OHIO.md#aceite) |
 
 ## Checklist de milestones
 
@@ -33,7 +30,14 @@
 
 **Gate M0:** **PASS 6/6** para os seis alertas de cinco regras na janela UTC de 01–02/11/2026, comprovados nas três fontes. A [Issue #4](https://github.com/raphaelguterres/detection-engineering-blue-team/issues/4) registra o encerramento da Fase 3. A lacuna de indexação de 27–30/10 permanece **investigação separada**.
 
+Documentação do laboratório Wazuh · [Repositório](https://github.com/raphaelguterres/detection-engineering-blue-team) · [Estado da Fase 3](https://github.com/raphaelguterres/detection-engineering-blue-team#estado-da-fase-3) · [Correlação Manager–Indexer](https://github.com/raphaelguterres/detection-engineering-blue-team/blob/main/docs/phase3-manager-indexer-exact-correlation-20261102.md)
+
 ### M1 — Threat Hunting e investigação · 35–60 h estimadas
+
+Em 10/11/2026, o proprietário aceitou os 17 itens do marco. As três hipóteses foram validadas em exercícios controlados com eventos reais. A revisão registra a remoção da conta temporária de H02 como pendente de confirmação. [Revisão de encerramento](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/59eeef6/docs/m1-final-review-20261110.md)
+
+<details>
+<summary>Histórico de 2 de novembro e checklist daquela data</summary>
 
 **Incremento de preparação implementado em 02/11/2026:** [PR #10 incorporado](https://github.com/raphaelguterres/threat-hunting-detection-lab/pull/10), com [três hipóteses documentadas](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/main/docs/m1-three-hunting-hypotheses.md), correlacionador Python offline e **20/20 testes sintéticos aprovados em Linux e Windows**. Os resultados representam somente validação do software de análise, **não novas detecções ou incidentes reais**.
 
@@ -56,9 +60,13 @@
 
 **Controle de mudança reforçado (02/11):** o [PR #21](https://github.com/raphaelguterres/threat-hunting-detection-lab/pull/21) acrescentou comparação offline de **original x proposta** do `agent.conf`, com **21 testes sintéticos aprovados no Windows e Linux**. A ferramenta permite somente o escopo Linux nos blocos elegíveis, rejeitando mudanças de caminhos, fontes, atributos e comentários. **Validação oficial da proposta passou em staging isolado no Wazuh Manager** ([PR #23](https://github.com/raphaelguterres/threat-hunting-detection-lab/pull/23)): `verify-agent-conf` retornou OK, original permaneceu intacto e a cópia temporária foi excluída. **Sem deployment**: ainda faltam inventário autorizado, aprovação de aplicação, backup/rollback e aceite FIM real Windows/Linux.
 
-**M1 permanece em andamento:** [Issue #9](https://github.com/raphaelguterres/threat-hunting-detection-lab/issues/9). As 35–60 horas são previsão para o restante dessa etapa, não horas já registradas.
+Em 02/11, o M1 estava em andamento e a previsão para a etapa era de 35–60 horas. [Issue de acompanhamento](https://github.com/raphaelguterres/threat-hunting-detection-lab/issues/9)
+
+</details>
 
 ### M2 — AppSec e DevSecOps · 65–110 h estimadas
+
+O [Assessment AppSec](https://github.com/raphaelguterres/appsec-automatizado) tem acesso restrito. O [estudo público do formulário em homologação](https://github.com/raphaelguterres/cloudflare-429-edge-lab/blob/main/docs/evidencias.md) apresenta o ciclo de correção e regressão.
 
 - [ ] Modelagem de ameaças de aplicação própria e ambiente autorizado.
 - [ ] SAST, secret scanning, análise de dependências e SBOM no CI.
@@ -68,7 +76,7 @@
 
 <!-- office:accepted-round M2 -->
 
-**Rodada VELAR concluída e aceita em 24/11/2026.** O proprietário aceitou os nove passos executados no escritório VELAR. A próxima prioridade operacional é M3.
+**Rodada VELAR concluída e aceita em 24/11/2026.** O proprietário aceitou os nove passos executados no escritório VELAR. Após essa rodada, o trabalho seguiu para o M3.
 
 | Evidência aceita | Resultado registrado |
 | --- | --- |
@@ -82,6 +90,8 @@ Os documentos de evidência e seus aceites estão no workspace do projeto VELAR.
 
 ### M3 — Incident Response & SOAR · 90–150 h estimadas
 
+O resumo abaixo é público. Os links de código e relatórios deste laboratório exigem acesso ao repositório privado.
+
 - [x] Criar repositório [incident-response-soar-lab](https://github.com/raphaelguterres/incident-response-soar-lab).
 - [x] Modelo de caso, normalização de alertas e enriquecimento rastreável.
 - [x] Triagem determinística com contexto e justificativa.
@@ -89,7 +99,10 @@ Os documentos de evidência e seus aceites estão no workspace do projeto VELAR.
 - [x] Testar falhas, repetição de eventos, rollback e trilha de auditoria.
 - [x] Relatório final com métricas do **ambiente de laboratório**, sem confundir com produção.
 
-**Registro de 24/11/2026.** Os seis passos da rodada M3 no escritório receberam aceite, incluindo a métrica de duplicação. O repositório privado reúne o README, as seis evidências e um protótipo local com dados sintéticos, triagem determinística, revisão humana, resposta em dry-run e auditoria. Sete testes locais passaram, incluindo duplicação, recusa, rollback de falha de auditoria e reabertura do SQLite. A revisão técnica do marco segue pelo checklist acima. [README e evidências](https://github.com/raphaelguterres/incident-response-soar-lab/blob/c43b8b8b358e6416ddee09fbc8cb67bcf51970a1/README.md).
+<details>
+<summary>Histórico da revisão inicial</summary>
+
+**Registro de 24/11/2026.** Os seis passos da rodada M3 no escritório receberam aceite, incluindo a métrica de duplicação. O repositório privado reúne o README, as seis evidências e um protótipo local com dados sintéticos, triagem determinística, revisão humana, resposta em dry-run e auditoria. Sete testes locais passaram, incluindo duplicação, recusa, rollback de falha de auditoria e reabertura do SQLite. Nessa primeira rodada, a revisão técnica do marco ainda estava aberta. [README e evidências](https://github.com/raphaelguterres/incident-response-soar-lab/blob/c43b8b8b358e6416ddee09fbc8cb67bcf51970a1/README.md).
 
 **Revisão inicial de 24/11/2026.** Os sete testes do commit c43b8b8 passaram em uma cópia local com fixtures sintéticas. A triagem determinística e o dry-run com decisão humana foram verificados. Naquele momento, o M3 ficou em revisão técnica. [Evidência da revisão](https://github.com/raphaelguterres/incident-response-soar-lab/blob/fd1a4fc612b972a141b2c03a5b29c8b5e462adff/docs/M3-REVISAO-TECNICA.md).
 
@@ -98,6 +111,8 @@ Pendências encontradas na revisão inicial, encerradas na revalidação abaixo:
 1. Demonstrar a normalização de uma fixture bruta para os campos canônicos e testar a preservação do identificador e da fonte.
 2. Sinalizar revisão pendente no caso ao receber uma entrega divergente depois do encaminhamento. A auditoria já registra a divergência. Falta refletir a pendência no caso e testar a preservação do encaminhamento original sem repeti-lo.
 3. Reexecutar a suíte e atualizar o relatório final do laboratório com os resultados e os limites da amostra.
+
+</details>
 
 **M3 concluído em 24/11/2026.** Os 10 testes do commit 9a52ba9 passaram. A entrada bruta preserva identidade e origem e é convertida para o modelo canônico. Uma nova entrega divergente marca o caso como pendente de revisão e preserva o único encaminhamento anterior. O relatório apresenta os resultados, a métrica de duplicação e os limites do ensaio sintético. A próxima prioridade é M4. [Relatório final do laboratório](https://github.com/raphaelguterres/incident-response-soar-lab/blob/ff11f9bb0704c67d3c6a365323f0145364e59f15/docs/M3-REVISAO-TECNICA.md).
 
@@ -118,7 +133,7 @@ O proprietário aceitou o ciclo de criação e remoção em Ohio em 24/11/2026. 
 2. Complementar o sinal `PutBucketPolicy`, já testado com entradas fictícias, com duas detecções adicionais. Validar as três com eventos reais de gerenciamento e testes seguros, mantendo o bloqueio de acesso público.
 3. Consolidar arquitetura, operação e remoção no relatório final. Vincular o inventário final ao recurso provisionado e conferir custos após a atualização do faturamento.
 
-A revisão e a publicação foram feitas fora da AWS. O ensaio em nuvem depende de confirmar o Free Plan ativo, os recursos autorizados e o limite de US$ 0 em cobranças.
+Para os próximos testes em nuvem, o escopo exige confirmar o plano gratuito, os recursos autorizados e o limite de US$ 0 em cobranças.
 
 ### Etapa avançada — somente após a base
 
@@ -129,6 +144,9 @@ A revisão e a publicação foram feitas fora da AWS. O ensaio em nuvem depende 
 
 ## Próximos 90 dias — sugestão adaptável
 
+<details>
+<summary>Plano original de novembro de 2026</summary>
+
 | Período | Prioridade | Evidência de saída |
 | --- | --- | --- |
 | Semanas 1–2 | **M0 concluído:** conferência Discover, aceite da Fase 3 | Seis identidades verificadas nas três fontes, estudo de caso e Issue #4 atualizados |
@@ -137,6 +155,8 @@ A revisão e a publicação foram feitas fora da AWS. O ensaio em nuvem depende 
 | Semanas 12–13 | Consolidar, revisar, documentar e planejar M3 | README, decisões, portfólio e backlog de resposta a incidentes |
 
 **Nota:** as semanas são um plano inicial, não prazos assumidos. A carga total da Etapa A é maior que 90 dias a 15 h/semana; o cronograma acima **não promete concluí-la nesse intervalo**.
+
+</details>
 
 ## Modelo de atualização semanal
 

@@ -1,28 +1,26 @@
-# Roadmap profissional | Blue Team, Detection Engineering e Security Engineering
+# Roadmap profissional de cibersegurança
 
-> **Trilha independente de evolução técnica** — iniciada em 02/11/2026. O objetivo é reunir evidências verificáveis de autonomia, engenharia, investigação, segurança e comunicação técnica. Este documento **não afirma** que um portfólio ou quantidade de horas concede senioridade, cargo ou experiência corporativa.
+[Perfil](../README.md) · [Progresso e evidências](PROGRESSO.md)
 
-**Foco:** SOC / Blue Team → Detection Engineering → Incident Response / SOAR → Cloud Security → Security Engineering.
-
-**Critério de progresso:** uma etapa só passa para **concluída** após implementação, teste, resultados reproduzíveis, análise de limitações e documentação. Itens futuros não devem aparecer como habilidades já comprovadas em currículo ou LinkedIn.
-
-[Ver acompanhamento de entregas e evidências](PROGRESSO.md) · [Portfólio GitHub](https://github.com/raphaelguterres)
+Trilha iniciada em 02/11/2026 para documentar competências em SOC, engenharia de detecção, resposta a incidentes e segurança em nuvem. Cada marco reúne implementação, testes reproduzíveis, resultados e limitações.
 
 ## Ponto de partida — projetos reais existentes
 
-| Repositório | Competências demonstradas | Próximo incremento |
+| Projeto | Prática | Situação |
 | --- | --- | --- |
 | [Detection Engineering Blue Team](https://github.com/raphaelguterres/detection-engineering-blue-team) | Regras Wazuh, Sysmon, testes de regressão, CI e correlação de alertas | **M0 concluído em 02/11:** [6/6 eventos verificados nas três fontes](https://github.com/raphaelguterres/detection-engineering-blue-team/blob/main/docs/phase3-final-three-stage-six-event-acceptance-20261102.md); [Issue #4 encerrada](https://github.com/raphaelguterres/detection-engineering-blue-team/issues/4) |
-| [Threat Hunting & Detection Lab](https://github.com/raphaelguterres/threat-hunting-detection-lab) | Telemetria Windows/Linux, FIM, investigação documentada, MITRE ATT&CK | Evoluir hipóteses, cobertura, tuning e qualidade das investigações |
-| [Assessment AppSec](https://github.com/raphaelguterres/appsec-automatizado) | Recon e avaliação de superfície **autorizada**, triagem, evidência e relatórios | Desenvolver pipeline AppSec com modelagem de ameaças, testes e acompanhamento de correções |
+| [Threat Hunting & Detection Lab](https://github.com/raphaelguterres/threat-hunting-detection-lab) | Telemetria Windows/Linux, FIM, investigação documentada, MITRE ATT&CK | M1 concluído em 10/11. [Revisão das três hipóteses](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/59eeef6/docs/m1-final-review-20261110.md) |
+| [Assessment AppSec · acesso restrito](https://github.com/raphaelguterres/appsec-automatizado) | Recon e avaliação de superfície **autorizada**, triagem, evidência e relatórios | Rodada VELAR aceita. Os critérios restantes constam no [checklist de M2](PROGRESSO.md#m2--appsec-e-devsecops--65110-h-estimadas). |
+| Resposta a incidentes e SOAR | Triagem, aprovação humana, resposta em dry-run e auditoria em laboratório | M3 concluído. [Resumo público](PROGRESSO.md#m3--incident-response--soar--90150-h-estimadas) |
+| [Cloud Security Detection Lab](https://github.com/raphaelguterres/cloud-security-detection-lab) | Infraestrutura com CloudFormation e teste de privilégios em S3 | M4 em andamento. [Evidência de IAM para aceite](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/4825ced03e17ecfe75bfcbcff8440c1920074f6d/docs/VALIDACAO-IAM-S3-OHIO.md#aceite) |
 
 **Marco M0 concluído em 02/11/2026:** cinco regras customizadas, regressões documentadas e **6/6 identidades exatas em Manager → Indexer → Dashboard Discover**, com mesmo ID original, regra, agente e timestamp UTC. A procedência de cada documento do Discover foi verificada pela interface autenticada e a evidência publicada somente como [relatório agregado sanitizado](https://github.com/raphaelguterres/detection-engineering-blue-team/blob/main/docs/phase3-final-three-stage-six-event-acceptance-20261102.md). A lacuna histórica 27–30/10 continua investigação separada.
 
 ## Visão de esforço e prazos
 
-As estimativas abaixo são **horas adicionais de trabalho prático**, não horas passadas rastreadas, nem critérios oficiais de contratação. Incluem planejamento, construção, troubleshooting, testes, evidências, documentação e revisão.
+As estimativas originais representam a carga planejada para a trilha completa, incluindo os marcos já concluídos. Incluem planejamento, construção, troubleshooting, testes, evidências, documentação e revisão.
 
-| Meta de portfólio | Horas adicionais acumuladas | Com 15 horas/semana |
+| Meta de portfólio | Horas planejadas acumuladas | Com 15 horas/semana |
 | --- | ---: | ---: |
 | Evidências competitivas para vagas de pleno | **308–515 h** | **~5–8 meses** |
 | Projetos com complexidade e responsabilidades próximas de escopo sênior | **748–1.255 h** | **~12–19 meses** |
@@ -41,7 +39,7 @@ As estimativas abaixo são **horas adicionais de trabalho prático**, não horas
 
 ### A1. Threat Hunting orientado a hipóteses — 35–60 h
 
-**Estado em 24/11/2026 · M1 concluído.** O proprietário aceitou as 17 evidências. [Revisão final](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/59eeef6/docs/m1-final-review-20261110.md)
+**Estado em 24/11/2026 · M1 concluído.** O proprietário aceitou os 17 itens em 10/11/2026. [Revisão final](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/59eeef6/docs/m1-final-review-20261110.md)
 
 **Reutilizar:** [Threat Hunting & Detection Lab](https://github.com/raphaelguterres/threat-hunting-detection-lab).
 
@@ -53,7 +51,7 @@ As estimativas abaixo são **horas adicionais de trabalho prático**, não horas
 
 **Estado em 24/11/2026 · Rodada VELAR do M2 aceita.** Os critérios técnicos restantes estão no [acompanhamento de evidências](PROGRESSO.md).
 
-**Reutilizar:** [Assessment AppSec](https://github.com/raphaelguterres/appsec-automatizado).
+**Reutilizar:** [Assessment AppSec · acesso restrito](https://github.com/raphaelguterres/appsec-automatizado).
 
 **Entregáveis:** modelagem de ameaças de aplicação controlada; revisão de autenticação, autorização e validação de entradas; análise de dependências/SBOM; pipeline SAST, secret scanning e DAST em ambiente permitido; matriz achado → correção → regressão.
 
@@ -61,7 +59,7 @@ As estimativas abaixo são **horas adicionais de trabalho prático**, não horas
 
 ### A3. Incident Response & SOAR Lab — 90–150 h
 
-**Estado em 24/11/2026 · M3 concluído.** [Repositório do laboratório](https://github.com/raphaelguterres/incident-response-soar-lab) · [Relatório técnico](https://github.com/raphaelguterres/incident-response-soar-lab/blob/ff11f9bb0704c67d3c6a365323f0145364e59f15/docs/M3-REVISAO-TECNICA.md)
+**Estado em 24/11/2026 · M3 concluído.** [Resumo público da revisão](PROGRESSO.md#m3--incident-response--soar--90150-h-estimadas). Acesso restrito aos originais · [Repositório do laboratório](https://github.com/raphaelguterres/incident-response-soar-lab) · [Relatório técnico](https://github.com/raphaelguterres/incident-response-soar-lab/blob/ff11f9bb0704c67d3c6a365323f0145364e59f15/docs/M3-REVISAO-TECNICA.md)
 
 **Entregáveis:** fluxo alerta → enriquecimento → classificação → caso → decisão; playbooks de contenção com aprovação humana; ações em **dry-run** por padrão; trilha de auditoria; validação de rollback, duplicatas, timeout e falhas de integração.
 
@@ -69,7 +67,7 @@ As estimativas abaixo são **horas adicionais de trabalho prático**, não horas
 
 ### A4. Cloud Security Detection Lab — 110–180 h
 
-**Estado em 24/11/2026 · M4 em andamento.** AWS Free Plan em Ohio (`us-east-2`), com limite de US$ 0 em cobranças. A Infraestrutura é a área em foco no escritório VELAR. O [repositório do laboratório](https://github.com/raphaelguterres/cloud-security-detection-lab) está publicado. A criação e a remoção da stack e do bucket em Ohio foram [aceitas](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/1304d94037e90db1179bc4f40baabc078213973c/docs/VALIDACAO-IAC-OHIO.md#aceite). A próxima prioridade é validar leitura permitida e escrita negada para a mesma identidade IAM. [Critérios técnicos e evidências](PROGRESSO.md#m4--cloud-security-e-iac--110180-h-estimadas)
+**Estado em 24/11/2026 · M4 em andamento.** AWS Free Plan em Ohio (`us-east-2`), com limite de US$ 0 em cobranças. A Infraestrutura é a área em foco no escritório VELAR. O [repositório do laboratório](https://github.com/raphaelguterres/cloud-security-detection-lab) está publicado. A criação e a remoção da stack e do bucket em Ohio foram [aceitas](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/1304d94037e90db1179bc4f40baabc078213973c/docs/VALIDACAO-IAC-OHIO.md#aceite). O teste confirmou leitura permitida e escrita negada na mesma sessão IAM. A evidência aguarda [aceite do proprietário](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/4825ced03e17ecfe75bfcbcff8440c1920074f6d/docs/VALIDACAO-IAM-S3-OHIO.md#aceite). [Critérios técnicos e evidências](PROGRESSO.md#m4--cloud-security-e-iac--110180-h-estimadas)
 
 **Entregáveis:** escolher **uma** nuvem primeiro (AWS ou Azure); infraestrutura reprodutível por IaC; IAM de privilégio mínimo; logs centralizados; três detecções; procedimento de investigação e remoção de recursos; estimativa de custo e limites de segurança.
 
@@ -88,7 +86,7 @@ As estimativas abaixo são **horas adicionais de trabalho prático**, não horas
 | B3. Security Infrastructure Engineering | 140–230 h | IaC segura, hardening, backup/restore testado, identidade e segredos, threat modeling e rollback |
 | B4. Decisões arquiteturais e mentoria | 50–100 h | ADRs, revisão técnica de terceiros, comunicação de trade-offs, incident review e documentação operacional |
 
-**Subtotal da Etapa B: 440–740 h. Acumulado desde agora: 748–1.255 h.**
+**Subtotal da Etapa B: 440–740 h. Total previsto no plano original: 748–1.255 h.**
 
 Essas entregas exercitam atribuições frequentemente associadas a profissionais experientes. **Nenhum número de commits, repositórios ou horas, isoladamente, comprova senioridade.**
 

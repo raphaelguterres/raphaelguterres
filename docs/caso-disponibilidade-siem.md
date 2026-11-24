@@ -1,35 +1,28 @@
-# Indisponibilidade do Indexer em um laboratório SOC
+# Quando o SIEM parou de indexar
 
-**Raphael Guterres · Exercício controlado com Wazuh e OpenSearch**
+**Estudo de caso · SOC Telemetry Health Lab · Wazuh e OpenSearch**
 
-## Cenário
+Pausei o Indexer para responder a duas perguntas. Uma sonda fora da VM perceberia a interrupção? Depois da retomada, eu conseguiria localizar os eventos emitidos durante a pausa?
 
-A visão operacional parou de responder durante uma interrupção planejada do Indexer. Investiguei quais componentes continuavam operando e se os marcadores emitidos durante a pausa ficariam consultáveis após a retomada.
+## Como isolei a falha
 
-## Investigação
+Pausei apenas o Indexer. No Windows, fora da VM do Kali, uma sonda HTTPS registrou dois timeouts consecutivos. Na VM, o processo do Wazuh Manager continuou em execução. As duas fontes Linux seguiram emitindo eventos e cada uma registrou um marcador durante a pausa.
 
-| Camada | Evidência observada |
-| --- | --- |
-| Sonda externa | Uma checagem HTTPS no Windows, fora da VM do Kali, confirmou a indisponibilidade após dois timeouts consecutivos. |
-| Fontes Linux | Duas fontes seguiram emitindo. Cada uma registrou um marcador no intervalo. |
-| Manager | O processo do Wazuh Manager permaneceu em execução. |
-| Indexer e verificador | Consultas e publicação de estado falharam enquanto o Indexer estava pausado. |
+Enquanto o Indexer esteve pausado, as consultas e a publicação de estado falharam. Comparei os registros das fontes com o resultado de uma consulta autenticada ao Indexer após a retomada. **Encontrei os dois marcadores.**
 
-Pausei somente o Indexer. Comparei os registros de emissão com as consultas e retomei o componente. A sequência isolou a falha na camada de indexação neste exercício.
-
-## Recuperação
+## O que medi
 
 | Medição | Resultado |
-| --- | --- |
-| Pausa controlada do Indexer | 75,593 s |
-| Do primeiro timeout à confirmação na sonda | 4,017 s |
-| Marcadores do intervalo consultáveis após a retomada | 2 de 2 |
-| Da retomada à confirmação das duas fontes em estado normal | 5,736 s |
+| --- | ---: |
+| Duração da pausa controlada do Indexer | 75,593 s |
+| Do primeiro timeout à confirmação da queda pela sonda | 4,017 s |
+| Da retomada à confirmação de estado normal nas duas fontes | 5,736 s |
+| Marcadores da pausa encontrados na consulta | 2 de 2 |
 
-A resposta HTTPS confirmou que o endpoint voltou a responder. A consulta autenticada ao Indexer confirmou a recuperação dos dois eventos. Os relógios do Windows e do Kali estavam desalinhados, então cada duração usa medições de uma só máquina.
+Os relógios do Windows e do Kali estavam desalinhados. Calculei cada intervalo com registros de uma única máquina. O resultado cobre uma interrupção e dois eventos de teste.
 
-## Melhoria aplicada
+## O que mudou
 
-A sonda passou a rodar como tarefa do Windows, com histórico local e registro de queda e recuperação independente do Indexer. O funcionamento da tarefa depende da sessão do Windows. O exercício mediu dois eventos de teste em uma única interrupção controlada.
+A sonda passou a rodar como tarefa do Windows. Ela guarda um histórico local de queda e recuperação que continua disponível quando o Indexer para de responder. A execução da tarefa depende da sessão do Windows.
 
-[Voltar ao portfólio](../README.md)
+[Voltar ao perfil](../README.md)
