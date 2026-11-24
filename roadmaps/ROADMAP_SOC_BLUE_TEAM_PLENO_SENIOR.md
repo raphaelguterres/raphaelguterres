@@ -69,7 +69,7 @@ As estimativas abaixo são **horas adicionais de trabalho prático**, não horas
 
 ### A4. Cloud Security Detection Lab — 110–180 h
 
-**Estado em 24/11/2026 · M4 em andamento.** AWS Free Plan em Ohio (`us-east-2`), com limite de US$ 0 em cobranças. A Infraestrutura é a área em foco no escritório VELAR. O [repositório do laboratório](https://github.com/raphaelguterres/cloud-security-detection-lab) está publicado. A próxima prioridade é comprovar a criação e a remoção da stack e do bucket em Ohio. [Critérios técnicos e evidências](PROGRESSO.md#m4--cloud-security-e-iac--110180-h-estimadas)
+**Estado em 24/11/2026 · M4 em andamento.** AWS Free Plan em Ohio (`us-east-2`), com limite de US$ 0 em cobranças. A Infraestrutura é a área em foco no escritório VELAR. O [repositório do laboratório](https://github.com/raphaelguterres/cloud-security-detection-lab) está publicado. A criação e a remoção da stack e do bucket em Ohio foram [aceitas](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/1304d94037e90db1179bc4f40baabc078213973c/docs/VALIDACAO-IAC-OHIO.md#aceite). A próxima prioridade é validar leitura permitida e escrita negada para a mesma identidade IAM. [Critérios técnicos e evidências](PROGRESSO.md#m4--cloud-security-e-iac--110180-h-estimadas)
 
 **Entregáveis:** escolher **uma** nuvem primeiro (AWS ou Azure); infraestrutura reprodutível por IaC; IAM de privilégio mínimo; logs centralizados; três detecções; procedimento de investigação e remoção de recursos; estimativa de custo e limites de segurança.
 
