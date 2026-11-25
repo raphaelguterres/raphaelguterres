@@ -88,6 +88,8 @@ O [Assessment AppSec](https://github.com/raphaelguterres/appsec-automatizado) te
 
 Os documentos de evidência e seus aceites estão no workspace do projeto VELAR. O checklist técnico acima continua sendo o registro dos critérios integrais da trilha. A rodada aceita cobriu um ciclo de correção e uma etapa do runbook. A cobertura de CI auditável, o DAST da trilha, o segundo ciclo independente e o runbook completo seguem no checklist.
 
+**CI da VELAR em 25/11/2026.** No PR #14, a imagem do Nginx foi atualizada para 1.30.8-alpine-slim e fixada por digest. O Trivy passou sem achados corrigíveis de severidade alta ou crítica nas imagens verificadas. Semgrep, Gitleaks e o gate de DevSecOps também passaram. O PR segue em rascunho, sem merge e sem deploy. [Execução do Trivy](https://github.com/raphaelguterres/velarcyber-website/actions/runs/45535396819/job/138940633355) · [Gate de DevSecOps](https://github.com/raphaelguterres/velarcyber-website/actions/runs/45535396819)
+
 ### M3 — Incident Response & SOAR · 90–150 h estimadas
 
 O resumo abaixo é público. Os links de código e relatórios deste laboratório exigem acesso ao repositório privado.
