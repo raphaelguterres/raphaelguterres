@@ -69,7 +69,7 @@ Em 02/11, o M1 estava em andamento e a previsão para a etapa era de 35–60 hor
 O [Assessment AppSec](https://github.com/raphaelguterres/appsec-automatizado) tem acesso restrito. O [estudo público do formulário em homologação](https://github.com/raphaelguterres/cloudflare-429-edge-lab/blob/main/docs/evidencias.md) apresenta o ciclo de correção e regressão.
 
 - [ ] Modelagem de ameaças de aplicação própria e ambiente autorizado.
-- [ ] SAST, secret scanning, análise de dependências e SBOM no CI.
+- [x] SAST, secret scanning, análise de dependências e SBOM no CI.
 - [ ] DAST com escopo restrito, orçamento de requisições e parada segura.
 - [ ] Dois ciclos evidenciados de achado → correção → teste de regressão.
 - [ ] Runbook de escopo, triagem, priorização e comunicação técnica.
@@ -86,9 +86,11 @@ O [Assessment AppSec](https://github.com/raphaelguterres/appsec-automatizado) te
 | Ciclo de correção e regressão | Worker temporário de homologação corrigido e retestado. O envio limitado retornou 429 sem gravação e um novo envio após a janela retornou 201. |
 | Triagem | Etapa com entrada, critérios de decisão e evidência para revisão, aplicada ao caso de homologação. |
 
-Os documentos de evidência e seus aceites estão no workspace do projeto VELAR. O checklist técnico acima continua sendo o registro dos critérios integrais da trilha. A rodada aceita cobriu um ciclo de correção e uma etapa do runbook. A cobertura de CI auditável, o DAST da trilha, o segundo ciclo independente e o runbook completo seguem no checklist.
+Os documentos de evidência e seus aceites estão no workspace do projeto VELAR. O checklist técnico acima continua sendo o registro dos critérios integrais da trilha. A rodada aceita cobriu um ciclo de correção e uma etapa do runbook. O DAST da trilha, o segundo ciclo independente e o runbook completo seguem no checklist.
 
 **CI da VELAR em 25/11/2026.** No PR #14, a imagem do Nginx foi atualizada para 1.30.8-alpine-slim e fixada por digest. O Trivy passou sem achados corrigíveis de severidade alta ou crítica nas imagens verificadas. Semgrep, Gitleaks e o gate de DevSecOps também passaram. O PR segue em rascunho, sem merge e sem deploy. [Execução do Trivy](https://github.com/raphaelguterres/velarcyber-website/actions/runs/45535396819/job/138940633355) · [Gate de DevSecOps](https://github.com/raphaelguterres/velarcyber-website/actions/runs/45535396819)
+
+**CI do Assessment em 25/11/2026.** No PR #1, o pip-audit auditou 36 pacotes do ambiente Python de build no runner Windows, sem pacotes ignorados e sem vulnerabilidades conhecidas encontradas. O SBOM CycloneDX 1.6 passou na validação e registrou 36 componentes do mesmo ambiente. A execução e o artefato são de acesso restrito. Os resultados da VELAR e do Assessment cobrem os quatro controles do critério de CI em execuções de pull request. [Execução do Assessment](https://github.com/raphaelguterres/appsec-automatizado/actions/runs/45539703820) · [Artefato de auditoria e SBOM](https://github.com/raphaelguterres/appsec-automatizado/actions/runs/45539703820/artifacts/14988009005)
 
 ### M3 — Incident Response & SOAR · 90–150 h estimadas
 
