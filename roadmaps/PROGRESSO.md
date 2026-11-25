@@ -6,7 +6,7 @@
 
 ## Situação atual
 
-Quatro dos cinco marcos foram concluídos. O M4 tem cinco de seis critérios técnicos concluídos. A prioridade atual é consolidar a operação, o encerramento e o faturamento do laboratório AWS.
+Os cinco marcos da trilha foram concluídos. O M4 encerrou com seis de seis critérios técnicos e estimativa regional de US$ 0,00 para o período dos ensaios em Ohio.
 
 | Marco | Estado | Evidência |
 | --- | --- | --- |
@@ -14,7 +14,7 @@ Quatro dos cinco marcos foram concluídos. O M4 tem cinco de seis critérios té
 | M1 · Threat hunting | Concluído | Três hipóteses validadas em laboratório. O proprietário aceitou os 17 itens em 10/11. [Revisão final](https://github.com/raphaelguterres/threat-hunting-detection-lab/blob/59eeef6/docs/m1-final-review-20261110.md) |
 | M2 · AppSec e DevSecOps | Concluído | Cinco critérios técnicos documentados, com dois ciclos de correção e runbook validado. [Checklist do M2](#m2--appsec-e-devsecops--65110-h-estimadas) · [Runbook de AppSec](M2-RUNBOOK.md) |
 | M3 · Resposta a incidentes | Concluído em laboratório | Dez testes com dados sintéticos. O relatório completo tem acesso restrito. [Resumo da revisão](#m3--incident-response--soar--90150-h-estimadas) |
-| M4 · Segurança em nuvem | Em andamento | Ciclo de criação e remoção via CloudFormation e teste de privilégio mínimo aceitos. As três detecções do CloudTrail foram validadas em Ohio. [Evidência do CloudTrail](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/635e7e40b13012a4159c4ed1f19a1b4d820eed2b/docs/VALIDACAO-CLOUDTRAIL-S3-OHIO.md) · [Aceite do IAM em Ohio](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/dd2ced0ebfb59da4a15867ec991c5682e52c2f01/docs/VALIDACAO-IAM-S3-OHIO.md#aceite) |
+| M4 · Segurança em nuvem | Concluído | CloudFormation, IAM, três detecções do CloudTrail, remoção e faturamento regional validados. [Relatório de encerramento](M4-RELATORIO-ENCERRAMENTO.md) |
 
 ## Checklist de milestones
 
@@ -137,13 +137,13 @@ Pendências encontradas na revisão inicial, encerradas na revalidação abaixo:
 - [x] Infraestrutura mínima reproduzível e removível por IaC. Criação e remoção em Ohio [verificadas e aceitas](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/1304d94037e90db1179bc4f40baabc078213973c/docs/VALIDACAO-IAC-OHIO.md#aceite).
 - [x] IAM de privilégio mínimo com verificação negativa. Leitura permitida e escrita negada na mesma sessão em Ohio, [aceitas pelo proprietário](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/dd2ced0ebfb59da4a15867ec991c5682e52c2f01/docs/VALIDACAO-IAM-S3-OHIO.md#aceite).
 - [x] Coletar eventos reais de gerenciamento do CloudTrail em Ohio. O detector identificou `PutBucketPublicAccessBlock`, `PutBucketPolicy` e `DeleteBucket` no mesmo bucket de teste. [Resultado e reprodução](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/635e7e40b13012a4159c4ed1f19a1b4d820eed2b/docs/VALIDACAO-CLOUDTRAIL-S3-OHIO.md)
-- [ ] Documentar custos, arquitetura, operação e teardown.
+- [x] Documentar custos, arquitetura, operação e teardown. Em 25/11/2026, o Cost Explorer exibiu US$ 0,00 para Ohio (`us-east-2`) no período que cobre os ensaios de 24/11, excluídos créditos e reembolsos. [Relatório de encerramento](M4-RELATORIO-ENCERRAMENTO.md#faturamento-em-2511)
 
 **Revisão de 24/11/2026.** Os seis passos documentais do escritório têm aceite, incluindo o procedimento de encerramento do bucket. O checklist técnico tem cinco de seis critérios concluídos. O README, o template do bucket privado e as [evidências sanitizadas](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/288a42b64fb2404f0ba23424847120a418b6b6ba/docs/EVIDENCIAS-M4.md) estão publicados.
 
 O proprietário aceitou o ciclo de criação e remoção em Ohio em 24/11/2026. A checagem das proteções em execução permaneceu inconclusiva. [Registro de aceite](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/1304d94037e90db1179bc4f40baabc078213973c/docs/VALIDACAO-IAC-OHIO.md#aceite)
 
-**Próxima prioridade no escritório · Infraestrutura.** O relatório reúne arquitetura, operação e evidências de remoção por ensaio. Na consulta de 25/11, o Cost Explorer retornou US$ 0,00 no total e nenhuma região. O critério permanece aberto até confirmar o faturamento do uso em Ohio após o processamento. [Relatório de encerramento](M4-RELATORIO-ENCERRAMENTO.md)
+**Encerramento do M4 em 25/11/2026.** O relatório reúne arquitetura, operação e evidências de remoção por ensaio. Por volta das 19h19, horário de Brasília, o Cost Explorer exibiu a linha de Ohio com **US$ 0,00** no recorte de 01 a 25/11/2026 UTC. A região e os custos sem créditos ou reembolsos foram conferidos no console gratuito. [Relatório de encerramento](M4-RELATORIO-ENCERRAMENTO.md)
 
 Para os próximos testes em nuvem, o escopo exige confirmar o plano gratuito, os recursos autorizados e o limite de US$ 0 em cobranças.
 

@@ -1,6 +1,6 @@
 # M4 · Relatório de encerramento do laboratório AWS em Ohio
 
-**Revisão de 25/11/2026** · **Estado** Evidência operacional consolidada. Conferência regional de faturamento em aberto.
+**Revisão de 25/11/2026** · **Estado** Encerramento concluído. O Cost Explorer exibiu US$ 0,00 para Ohio no período dos ensaios.
 
 ## Escopo, arquitetura e operação
 
@@ -18,12 +18,13 @@ Em 25/11, a reprodução local com a projeção sanitizada confirmou os três si
 
 ## Faturamento em 25/11
 
+Na primeira consulta de 25/11, o Cost Explorer exibiu US$ 0,00 no total da conta e zero regiões. Na nova consulta, por volta das 19h19 no horário de Brasília (22h19 UTC), o agrupamento por Região passou a exibir Ohio.
+
 | Fonte | Resultado observado | Alcance da evidência |
 | --- | --- | --- |
-| AWS Settings · Faturamento | Plano gratuito e **US$ 0,00 de valor devido**. | Saldo exibido na consulta. |
-| Cost Explorer · 01–25/11/2026 UTC | **US$ 0,00 no total** em custos não combinados, excluindo `Credit` e `Refund`. | Estimativa acumulada do projeto no período. |
-| Cost Explorer · agrupamento e filtro por região | Zero regiões disponíveis. O seletor exibiu **Sem regiões** e **0 de 0 resultados**. | A consulta não apresentou uma linha atribuída a Ohio nem confirmou que o uso do ensaio já foi refletido no recorte regional. |
+| AWS Settings · Faturamento | Plano gratuito e **US$ 0,00 de valor devido** no registro anterior. | Valor devido da conta na consulta registrada. |
+| Cost Explorer · 01–25/11/2026 UTC, agrupado por Região | **Leste dos EUA (Ohio), US$ 0,00**. O total do projeto também exibiu **US$ 0,00**. | Custos não combinados, excluindo `Credit` e `Refund`. O recorte cobre os três ensaios de 24/11, cujos horários UTC constam acima. |
 
-A estimativa do mês pode mudar após o processamento. A confirmação que falta é uma visão de faturamento atualizada que atribua a Ohio o uso do período dos ensaios, com o respectivo custo, mantendo o limite de US$ 0 em cobranças. [Faturamento por projeto](https://docs.aws.amazon.com/accounts/latest/reference/view-billing-information.html) · [Estimativa mensal e fatura](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/differences-billing-data-cost-explorer-data.html)
+O valor é a estimativa de novembro apresentada pelo console no momento da leitura. A interface consultada não mostrou a hora de processamento. A consulta foi gratuita e somente leitura. [Faturamento por projeto](https://docs.aws.amazon.com/accounts/latest/reference/view-billing-information.html) · [Estimativa mensal e fatura](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/differences-billing-data-cost-explorer-data.html)
 
-O M4 permanece com **5 de 6 critérios técnicos concluídos**. A consulta de hoje foi somente leitura.
+O M4 está com **6 de 6 critérios técnicos concluídos**. [Checklist do M4](PROGRESSO.md#m4--cloud-security-e-iac--110180-h-estimadas)
