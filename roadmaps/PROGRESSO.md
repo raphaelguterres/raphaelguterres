@@ -68,7 +68,7 @@ Em 02/11, o M1 estava em andamento e a previsão para a etapa era de 35–60 hor
 
 O [Assessment AppSec](https://github.com/raphaelguterres/appsec-automatizado) tem acesso restrito. O [estudo público do formulário em homologação](https://github.com/raphaelguterres/cloudflare-429-edge-lab/blob/main/docs/evidencias.md) apresenta o ciclo de correção e regressão.
 
-- [ ] Modelagem de ameaças de aplicação própria e ambiente autorizado.
+- [x] Modelagem de ameaças de aplicação própria e ambiente autorizado.
 - [x] SAST, secret scanning, análise de dependências e SBOM no CI.
 - [ ] DAST com escopo restrito, orçamento de requisições e parada segura.
 - [ ] Dois ciclos evidenciados de achado → correção → teste de regressão.
@@ -87,6 +87,8 @@ O [Assessment AppSec](https://github.com/raphaelguterres/appsec-automatizado) te
 | Triagem | Etapa com entrada, critérios de decisão e evidência para revisão, aplicada ao caso de homologação. |
 
 Os documentos de evidência e seus aceites estão no workspace do projeto VELAR. O checklist técnico acima continua sendo o registro dos critérios integrais da trilha. A rodada aceita cobriu um ciclo de correção e uma etapa do runbook. O DAST da trilha, o segundo ciclo independente e o runbook completo seguem no checklist.
+
+**Modelagem de ameaças revisada em 25/11/2026.** O escopo foi o formulário de avaliação da VELAR em homologação autorizada. O modelo aceito em 24/11 mapeia os dados e as fronteiras entre navegador, proxy, API e SQLite e registra as seis categorias do STRIDE. Nos ensaios com dados fictícios, a API recusou envios sem consentimento com HTTP 422 antes de gravar. A resposta HTTP 429 impediu a gravação de um envio repetido e um novo envio foi aceito após a janela. O e-mail autodeclarado e a evidência e retenção do consentimento continuam como pontos de acompanhamento. [Evidência sanitizada do limite e da recuperação em homologação](https://github.com/raphaelguterres/cloudflare-429-edge-lab/blob/0dc62ad9144971a9da30d4b246514fb74dfcbf0e/docs/evidencias.md#registro-sanitizado-da-rodada-final)
 
 **CI da VELAR em 25/11/2026.** No PR #14, a imagem do Nginx foi atualizada para 1.30.8-alpine-slim e fixada por digest. O Trivy passou sem achados corrigíveis de severidade alta ou crítica nas imagens verificadas. Semgrep, Gitleaks e o gate de DevSecOps também passaram. O PR segue em rascunho, sem merge e sem deploy. [Execução do Trivy](https://github.com/raphaelguterres/velarcyber-website/actions/runs/45535396819/job/138940633355) · [Gate de DevSecOps](https://github.com/raphaelguterres/velarcyber-website/actions/runs/45535396819)
 
