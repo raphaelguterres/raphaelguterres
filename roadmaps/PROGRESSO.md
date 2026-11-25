@@ -143,7 +143,7 @@ Pendências encontradas na revisão inicial, encerradas na revalidação abaixo:
 
 O proprietário aceitou o ciclo de criação e remoção em Ohio em 24/11/2026. A checagem das proteções em execução permaneceu inconclusiva. [Registro de aceite](https://github.com/raphaelguterres/cloud-security-detection-lab/blob/1304d94037e90db1179bc4f40baabc078213973c/docs/VALIDACAO-IAC-OHIO.md#aceite)
 
-**Próxima prioridade no escritório · Infraestrutura.** Consolidar arquitetura, operação e remoção no relatório final. Vincular o inventário final ao recurso provisionado e conferir custos após a atualização do faturamento.
+**Próxima prioridade no escritório · Infraestrutura.** O relatório reúne arquitetura, operação e evidências de remoção por ensaio. Na consulta de 25/11, o Cost Explorer retornou US$ 0,00 no total e nenhuma região. O critério permanece aberto até confirmar o faturamento do uso em Ohio após o processamento. [Relatório de encerramento](M4-RELATORIO-ENCERRAMENTO.md)
 
 Para os próximos testes em nuvem, o escopo exige confirmar o plano gratuito, os recursos autorizados e o limite de US$ 0 em cobranças.
 
