@@ -71,7 +71,7 @@ O [Assessment AppSec](https://github.com/raphaelguterres/appsec-automatizado) te
 - [x] Modelagem de ameaças de aplicação própria e ambiente autorizado.
 - [x] SAST, secret scanning, análise de dependências e SBOM no CI.
 - [x] DAST com escopo restrito, orçamento de requisições e parada segura.
-- [ ] Dois ciclos evidenciados de achado → correção → teste de regressão.
+- [x] Dois ciclos evidenciados de achado → correção → teste de regressão.
 - [ ] Runbook de escopo, triagem, priorização e comunicação técnica.
 
 <!-- office:accepted-round M2 -->
@@ -86,13 +86,15 @@ O [Assessment AppSec](https://github.com/raphaelguterres/appsec-automatizado) te
 | Ciclo de correção e regressão | Worker temporário de homologação corrigido e retestado. O envio limitado retornou 429 sem gravação e um novo envio após a janela retornou 201. |
 | Triagem | Etapa com entrada, critérios de decisão e evidência para revisão, aplicada ao caso de homologação. |
 
-Os documentos de evidência e seus aceites estão no workspace do projeto VELAR. O checklist técnico acima continua sendo o registro dos critérios integrais da trilha. A rodada aceita cobriu um ciclo de correção e uma etapa do runbook. O segundo ciclo independente e o runbook completo seguem no checklist.
+Os documentos de evidência e seus aceites estão no workspace do projeto VELAR. O checklist técnico acima continua sendo o registro dos critérios integrais da trilha. A rodada aceita cobriu um ciclo de correção e uma etapa do runbook. O runbook completo segue no checklist.
 
 **Modelagem de ameaças revisada em 25/11/2026.** O escopo foi o formulário de avaliação da VELAR em homologação autorizada. O modelo aceito em 24/11 mapeia os dados e as fronteiras entre navegador, proxy, API e SQLite e registra as seis categorias do STRIDE. Nos ensaios com dados fictícios, a API recusou envios sem consentimento com HTTP 422 antes de gravar. A resposta HTTP 429 impediu a gravação de um envio repetido e um novo envio foi aceito após a janela. O e-mail autodeclarado e a evidência e retenção do consentimento continuam como pontos de acompanhamento. [Evidência sanitizada do limite e da recuperação em homologação](https://github.com/raphaelguterres/cloudflare-429-edge-lab/blob/0dc62ad9144971a9da30d4b246514fb74dfcbf0e/docs/evidencias.md#registro-sanitizado-da-rodada-final)
 
 **DAST dirigido do formulário em 25/11/2026.** A validação HTTP ficou restrita à cópia da API do formulário em loopback, com dados fictícios, SQLite descartável, teto de 12 tentativas, uma requisição por vez e sem seguir redirecionamentos ou repetir chamadas automaticamente. A primeira conexão foi bloqueada antes de chegar à API. O roteiro seguinte tinha até dez requisições e deixou cinco registros fictícios. O Windows manteve um arquivo aberto durante o encerramento, e o log HTTP dessa rodada ficou indisponível. A integridade do SQLite foi conferida e a base foi removida.
 
 Na checagem complementar, às 00h42 no horário de Brasília, o limitador foi preparado em memória na mesma revisão da API. Uma única chamada a `POST /api/lead` em `127.0.0.1:17891` recebeu `429 rate_limited` e encerrou o teste sem novas chamadas. O SQLite continuou com zero linhas e integridade `ok`. O serviço foi encerrado e a base removida. A revisão da API corresponde ao SHA-256 `0ae7e0d6f14d9a689e7fc23eb3b1d91d6c3be011c148a89ca09ba977ac8c600f`. [Evidência anterior de homologação](https://github.com/raphaelguterres/cloudflare-429-edge-lab/blob/0dc62ad9144971a9da30d4b246514fb74dfcbf0e/docs/evidencias.md#registro-sanitizado-da-rodada-final)
+
+**Segundo ciclo em homologação em 25/11/2026.** O achado de severidade média era a confirmação indevida de envio diante de uma resposta HTTP 200 inesperada. A interface apagava os campos mesmo com zero registros. A correção preserva os dados até receber HTTP 201 com confirmação explícita no JSON. No Edge em loopback, respostas inesperadas simuladas preservaram os dados e a cópia local da API retornou HTTP 201 após gravar uma solicitação fictícia no SQLite descartável. O teste também confirmou o aviso de HTTP 429. Três dos cinco testes de regressão falhavam antes da correção e os cinco passaram depois. Este ciclo trata da confirmação no navegador. O primeiro ciclo tratou da correção no Worker de homologação. [PR da correção](https://github.com/raphaelguterres/velarcyber-website/pull/15) · [Testes de regressão](https://github.com/raphaelguterres/velarcyber-website/blob/44aec19b9f2b4fc2792460154b06cb922879623b/tests/lead-form.test.mjs)
 
 **CI da VELAR em 25/11/2026.** No PR #14, a imagem do Nginx foi atualizada para 1.30.8-alpine-slim e fixada por digest. O Trivy passou sem achados corrigíveis de severidade alta ou crítica nas imagens verificadas. Semgrep, Gitleaks e o gate de DevSecOps também passaram. O PR segue em rascunho, sem merge e sem deploy. [Execução do Trivy](https://github.com/raphaelguterres/velarcyber-website/actions/runs/45535396819/job/138940633355) · [Gate de DevSecOps](https://github.com/raphaelguterres/velarcyber-website/actions/runs/45535396819)
 
